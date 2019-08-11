@@ -40,6 +40,7 @@ namespace CRUDCore.DAL.Entities
                 var manager = scope.ServiceProvider.GetRequiredService<UserManager<DbUser>>();
                 var managerRole = scope.ServiceProvider.GetRequiredService<RoleManager<DbRole>>();
                 SeederDB.SeedData(manager, managerRole);
+                //sadsad
             }
         }
     }
