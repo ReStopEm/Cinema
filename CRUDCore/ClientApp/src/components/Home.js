@@ -4,15 +4,12 @@ import classnames from 'classnames';
 import './Modal.css';
 import PropTypes from 'prop-types';
 import get from 'lodash.get';
+import { Link } from "react-router-dom";
 class Home extends Component {
     state = {
         isShowModal: false,
-        // credentialMessage: {
-        //     isShow: false
-        // }
     }
     componentDidMount() {
-       //this.props.getListData();
     }
     redirectToAddUser = (e) => {
         const { history } = this.props;
@@ -21,21 +18,18 @@ class Home extends Component {
         history.push('/user/add');
     }
     render() {
-        // const listContent = this.props.list.map(item => {
-        //     return (
-        //         <div key={item.id} className="col-lg-3 col-md-4 col-6">
-        //             <a href="#" className="d-block mb-4 h-100">
-        //                 <img className="img-fluid img-thumbnail" src={item.image} alt="" />
-        //             </a>
-        //         </div>
-        //     )
-        // });
         return (
-        <div>
-            <div className="row text-center text-lg-left">
-                {/* {listContent} */}
+            <div>
+                <td>
+                    <tr>
+                        <li className="nav-item">
+                            <Link className="text-light nav-link" to="/Application">Телохранитель</Link>
+                        </li>
+                    </tr>
+                </td>
+                <div className="row text-center text-lg-left">
+                </div>
             </div>
-        </div>
         );
     }
 }

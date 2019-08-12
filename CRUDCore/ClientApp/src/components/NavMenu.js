@@ -17,9 +17,9 @@ class NavMenu extends Component {
                                 <li className="nav-item">
                                     <Link className="text-light nav-link" to="/">Home</Link>
                                 </li>
-                                <li className="nav-item">
+                                {/* <li className="nav-item">
                                     <Link className="text-light nav-link" to="/Application">Player</Link>
-                                </li>
+                                </li> */}
                                 <li className="nav-item">
                                     <Link className="text-light nav-link" to="/registration">Register</Link>
                                 </li>
