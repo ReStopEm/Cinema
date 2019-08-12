@@ -16,9 +16,6 @@ class NavMenu extends Component {
                         <div className="d-sm-inline-flex flex-sm-row-reverse collapse navbar-collapse">
                             <ul className="navbar-nav flex-grow">
                                 <li className="nav-item">
-                                    <Link className="text-light nav-link" to="/Application">Player</Link>
-                                </li>
-                                <li className="nav-item">
                                     <Link className="text-light nav-link" to="/registration">Register</Link>
                                 </li>
                                 <li className="nav-item">
