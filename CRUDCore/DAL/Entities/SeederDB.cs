@@ -14,24 +14,24 @@ namespace CRUDCore.DAL.Entities
         {
             var email = "admin@gmail.com";
             var roleName = "Admin";
-            var findUser = userManager.FindByEmailAsync(email).Result;
-            if (findUser == null)
-            {
-                var user = new DbUser
-                {
-                    Email = email,
-                    UserName = email
-                };
-                var result = userManager.CreateAsync(user, "Qwerty1-").Result;
+            //var findUser = userManager.FindByEmailAsync(email).Result;
+            //if (findUser == null)
+            //{
+            //    var user = new DbUser
+            //    {
+            //        Email = email,
+            //        UserName = email
+            //    };
+            //    var result = userManager.CreateAsync(user, "Qwerty1-").Result;
 
-                var roleresult = roleManager.CreateAsync(new DbRole
-                {
-                    Name = roleName
+            //    var roleresult = roleManager.CreateAsync(new DbRole
+            //    {
+            //        Name = roleName
 
-                }).Result;
+            //    }).Result;
 
-                result = userManager.AddToRoleAsync(user, roleName).Result;
-            }
+            //    result = userManager.AddToRoleAsync(user, roleName).Result;
+            //}
         }
         public static void SeedDataByAS(IServiceProvider services)
         {
@@ -39,7 +39,7 @@ namespace CRUDCore.DAL.Entities
             {
                 var manager = scope.ServiceProvider.GetRequiredService<UserManager<DbUser>>();
                 var managerRole = scope.ServiceProvider.GetRequiredService<RoleManager<DbRole>>();
-                SeederDB.SeedData(manager, managerRole);
+                //SeederDB.SeedData(manager, managerRole);
             }
         }
     }

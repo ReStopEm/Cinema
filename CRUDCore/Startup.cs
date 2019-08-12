@@ -99,7 +99,7 @@ namespace CRUDCore
                 }
             });
 
-            SeederDB.SeedDataByAS(app.ApplicationServices);
+           // SeederDB.SeedDataByAS(app.ApplicationServices);
         }
     }
 }
