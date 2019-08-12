@@ -22,6 +22,7 @@
     "react-hot-loader": "^4.12.10",
     "react-image-mapper": "0.0.14",
     "react-redux": "^7.0.3",
+    "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
     "redux": "^4.0.1",

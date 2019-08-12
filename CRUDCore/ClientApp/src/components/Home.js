@@ -12,7 +12,7 @@ class Home extends Component {
         // }
     }
     componentDidMount() {
-       //this.props.getListData();
+        //this.props.getListData();
     }
     redirectToAddUser = (e) => {
         const { history } = this.props;
@@ -20,6 +20,7 @@ class Home extends Component {
         console.log('-----перехід на іншу сторінку------');
         history.push('/user/add');
     }
+  
     render() {
         // const listContent = this.props.list.map(item => {
         //     return (
@@ -31,20 +32,25 @@ class Home extends Component {
         //     )
         // });
         return (
-        <div>
-            <div className="row text-center text-lg-left">
-                {/* {listContent} */}
+            <div>
+                 <div className="row text-center text-lg-left">
+                    <div  className="col-lg-3 col-md-4 col-6">
+                        <a href="/Application.js" className="d-block mb-4 h-100">
+                            <img className="img-fluid img-thumbnail" src="/Images/телохранитель.jpg" alt="" />
+                        </a>
+                     
+                    </div>
+                </div> 
             </div>
-        </div>
         );
     }
 }
 
 const mapStateProps = (state) => {
     return {
-        list: get(state, 'animal.list.data'),
-        isListLoading: get(state, 'animal.list.loading'),
-        isListError: get(state, 'animal.list.error')
+        list: get(state, 'user.list.data'),
+        isListLoading: get(state, 'user.list.loading'),
+        isListError: get(state, 'user.list.error')
     }
 }
 

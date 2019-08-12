@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import classnames from 'classnames';
 import './registration.css'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { render } from 'react-dom';
 
 class registration extends Component {
     state = {}
@@ -29,6 +31,7 @@ class registration extends Component {
                     console.log('--err problem---', err);
                 }
             );
+
     }
     render() {
         return (
@@ -39,19 +42,19 @@ class registration extends Component {
                         <div class="row">
                             <div classNames="col-md-6">
                                 <div classNames="form-group">
-                                    <input type="text" classNames="form-control" placeholder="Nikname *" value="" />
+                                    <input type="text" classNames="form-control" placeholder="Nikname *" />
                                 </div>
-                                <br/>
+                                <br />
                                 <div classNames="form-group">
-                                    <input type="text" classNames="form-control" placeholder="Password *" value="" />
+                                    <input type="text" classNames="form-control" placeholder="Password *" />
                                 </div>
-                                <br/>
+                                <br />
                                 <div classNames="form-group">
-                                    <input type="text" classNames="form-control" placeholder="Confirm Password *" value="" />
+                                    <input type="text" classNames="form-control" placeholder="Confirm Password *" />
                                 </div>
-                                <br/>
+                                <br />
                             </div>
-                            <button type="submit"  class="btnSubmit">Submit</button>
+                            <button type="submit" class="btnSubmit"> <Link className="text-light link" to="/">Submit</Link></button>
                         </div>
                     </div>
                 </div>

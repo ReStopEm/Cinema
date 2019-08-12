@@ -14,7 +14,6 @@ function App() {
         <style>{'body {background: -webkit-linear-gradient(right, #000000,#1d3655); }'}</style>
       </Helmet>
       <Switch>
-        <Route exact path='/' component={Home} />
         <Route exact path='/login' component={LoginPage} />
         <Route exact path='/Application' component={Application} />
         <Route exact path='/registration' component={registration} />

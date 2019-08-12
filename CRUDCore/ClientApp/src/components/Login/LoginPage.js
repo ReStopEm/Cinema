@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { render } from 'react-dom';
 
 class LoginPage extends Component {
     state = {}
@@ -18,7 +20,7 @@ class LoginPage extends Component {
                                 </div>
                                 <br />
                             </div>
-                            <button type="button" class="btnSubmit">Submit</button>
+                            <button type="submit" class="btnSubmit"> <Link className="text-light link" to="/">Submit</Link></button>
                         </div>
                     </div>
                 </div>
