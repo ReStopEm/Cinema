@@ -99,7 +99,7 @@ class Application extends Component {
   }
   onProgress = state => {
     console.log('onProgress', state)
-    // We only want to update time slider if we are not currently seeking
+
     if (!this.state.seeking) {
       this.setState(state)
     }
@@ -125,14 +125,22 @@ class Application extends Component {
   ref = player => {
     this.player = player
   }
-  render () {
+  render() {
     const { url, playing, controls, light, volume, muted, loop, played, loaded, duration, playbackRate, pip } = this.state
     const SEPARATOR = ' · '
 
     return (
+
+
       <div className='app'>
         <section className='section'>
-          
+          <table>
+            <tr>
+              <td>
+                <p className="filmtext" >Телохранитель</p>
+              </td>
+            </tr>
+          </table>
           <div className='player-wrapper'>
             <ReactPlayer
               ref={this.ref}
@@ -162,29 +170,30 @@ class Application extends Component {
               onDuration={this.onDuration}
             />
           </div>
-          
-        
-        </section>
-        <section className='section'>
-          <table><tbody>
-            <tr>
-              <th>YouTube</th>
-              <td>
-                {this.renderLoadButton('https://www.youtube.com/watch?v=tInCbMNqRxo', 'Test A')}
-              </td>
-            </tr>
-           
-            <tr>
-              <th>Custom URL</th>
-              <td>
-                <input ref={input => { this.urlInput = input }} type='text' placeholder='Enter URL' />
-                <button onClick={() => this.setState({ url: this.urlInput.value })}>Load</button>
-              </td>
-            </tr>
-          </tbody></table>
+
 
         </section>
-       
+        <section className='section'>
+          <table>
+            <tbody>
+              <tr>
+                <th>YouTube</th>
+                <td>
+                  {this.renderLoadButton('https://www.youtube.com/watch?v=tInCbMNqRxo', 'Test A')}
+                </td>
+              </tr>
+
+              <tr>
+                <th>Custom URL</th>
+                <td>
+                  <input ref={input => { this.urlInput = input }} type='text' placeholder='Enter URL' />
+                  <button onClick={() => this.setState({ url: this.urlInput.value })}>Load</button>
+                </td>
+              </tr>
+            </tbody></table>
+
+        </section>
+
       </div>
     )
   }

@@ -16,6 +16,10 @@ $gutter-width: 20px;
   vertical-align: top;
 }
 
+.filmtext{
+  color: white;
+  font-size:2em;
+}
 .player-wrapper {
   width: 480px;
   height: 270px;

@@ -20,13 +20,11 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <td>
-                    <tr>
-                        <li className="nav-item">
-                            <Link className="text-light nav-link" to="/Application">Телохранитель</Link>
-                        </li>
-                    </tr>
-                </td>
+
+                <li className="nav-item">
+                    <Link style={{color: 'white'}} className="filmtext;body" to="/Application">Телохранитель</Link>
+                </li>
+
                 <div className="row text-center text-lg-left">
                 </div>
             </div>
