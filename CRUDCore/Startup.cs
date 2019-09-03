@@ -89,6 +89,14 @@ namespace CRUDCore
                     template: "{controller}/{action=Index}/{id?}");
             });
 
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+
+            app.UseStaticFiles();
+            app.UseMvc();
+
             app.UseSpa(spa =>
             {
                 spa.Options.SourcePath = "ClientApp";
