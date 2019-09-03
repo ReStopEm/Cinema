@@ -36,6 +36,7 @@ class registration extends Component {
             <div classNames="container register-form">
                 <div classNames="form">
                     <div id="form-content">
+                        <form action="SeedData.js">
                         <div class="row">
                             <div classNames="col-md-6">
                                 <div classNames="form-group">
@@ -53,6 +54,7 @@ class registration extends Component {
                             </div>
                             <button type="submit"  class="btnSubmit">Submit</button>
                         </div>
+                        </form>
                     </div>
                 </div>
             </div>
