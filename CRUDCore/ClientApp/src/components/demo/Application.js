@@ -179,17 +179,17 @@ class Application extends Component {
               <tr>
                 <th>YouTube</th>
                 <td>
-                  {this.renderLoadButton('https://www.youtube.com/watch?v=tInCbMNqRxo', 'Test A')}
+                  {this.renderLoadButton('https://www.youtube.com/watch?v=tInCbMNqRxo','start')}
                 </td>
               </tr>
 
-              <tr>
+               {/* <tr>
                 <th>Custom URL</th>
                 <td>
                   <input ref={input => { this.urlInput = input }} type='text' placeholder='Enter URL' />
                   <button onClick={() => this.setState({ url: this.urlInput.value })}>Load</button>
                 </td>
-              </tr>
+              </tr>  */}
             </tbody></table>
 
         </section>
