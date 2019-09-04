@@ -25,7 +25,7 @@ class Application extends Component {
     controls: true,
     light: false,
     volume: 0.8,
-    muted: false,
+    muted: true,
     played: 0,
     loaded: 0,
     duration: 0,
