@@ -26,7 +26,7 @@ namespace CRUDCore
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<EFContext>(opt =>
+	    services.AddDbContext<EFContext>(opt =>
                 opt.UseSqlServer(Configuration
                     .GetConnectionString("DefaultConnection")));
 
@@ -53,8 +53,7 @@ namespace CRUDCore
                     ValidateIssuerSigningKey = true
                 };
             });
-
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
@@ -74,7 +73,6 @@ namespace CRUDCore
             else
             {
                 app.UseExceptionHandler("/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
 
@@ -82,20 +80,13 @@ namespace CRUDCore
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
 
+	    app.UseStaticFiles();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
                     name: "default",
                     template: "{controller}/{action=Index}/{id?}");
             });
-
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-
-            app.UseStaticFiles();
-            app.UseMvc();
 
             app.UseSpa(spa =>
             {
@@ -106,8 +97,6 @@ namespace CRUDCore
                     spa.UseReactDevelopmentServer(npmScript: "start");
                 }
             });
-
-           // SeederDB.SeedDataByAS(app.ApplicationServices);
         }
     }
 }
