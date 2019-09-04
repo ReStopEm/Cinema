@@ -8,12 +8,8 @@ import { Link } from "react-router-dom";
 class Home extends Component {
     state = {
         isShowModal: false,
-        // credentialMessage: {
-        //     isShow: false
-        // }
     }
     componentDidMount() {
-        //this.props.getListData();
     }
     redirectToAddUser = (e) => {
         const { history } = this.props;
@@ -21,28 +17,27 @@ class Home extends Component {
         console.log('-----перехід на іншу сторінку------');
         history.push('/user/add');
     }
-  
     render() {
-        <div>
-            <td>
-                <tr>
-                    <li className="nav-item">
-                        <Link className="text-light nav-link" to="/Application">Телохранитель</Link>
-                    </li>
-                </tr>
-            </td>
-            <div className="row text-center text-lg-left">
+        return (
+            <div>
+
+                <li className="nav-item">
+                    <Link style={{color: 'white'}} className="text-light nav-link"  to="/Application" >Телохранитель</Link>
+                    
+                </li>
+
+                <div className="row text-center text-lg-left">
+                </div>
             </div>
-        </div>
         );
     }
 }
 
 const mapStateProps = (state) => {
     return {
-        list: get(state, 'user.list.data'),
-        isListLoading: get(state, 'user.list.loading'),
-        isListError: get(state, 'user.list.error')
+        list: get(state, 'animal.list.data'),
+        isListLoading: get(state, 'animal.list.loading'),
+        isListError: get(state, 'animal.list.error')
     }
 }
 
