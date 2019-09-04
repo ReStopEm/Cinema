@@ -22,7 +22,7 @@ class Home extends Component {
             <div>
 
                 <li className="nav-item">
-                    <Link style={{color: 'white'}} className="filmtext;body"  to="/Application" >Телохранитель</Link>
+                    <Link style={{color: 'white'}} className="text-light nav-link"  to="/Application" >Телохранитель</Link>
                     
                 </li>
 
