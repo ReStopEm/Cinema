@@ -76,7 +76,7 @@ namespace CRUDCore.Controllers
         {
             var claims = new Claim[]
             {
-                new Claim("id", user.Id),
+                new Claim("id", user.Id.ToString()),
                 new Claim("name", user.UserName)
             };
 
