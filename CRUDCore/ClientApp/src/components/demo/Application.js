@@ -133,15 +133,22 @@ class Application extends Component {
 
 
       <div className='app'>
+
         <section className='section'>
           <table>
             <tr>
               <td>
                 <p className="filmtext" >Телохранитель</p>
+                {/* <div class="container">
+                      <div class="embed-responsive embed-responsive-4by3">
+                        <iframe class="embed-responsive-item" src="//www.youtube.com/embed/tInCbMNqRxo"></iframe>
+                      </div>
+                  </div> */}
               </td>
             </tr>
           </table>
           <div className='player-wrapper'>
+
             <ReactPlayer
               ref={this.ref}
               className='react-player'
@@ -176,21 +183,23 @@ class Application extends Component {
         <section className='section'>
           <table>
             <tbody>
+
               <tr>
                 <th>YouTube</th>
                 <td>
-                  {this.renderLoadButton('https://www.youtube.com/watch?v=tInCbMNqRxo','start')}
+                  {this.renderLoadButton('https://www.youtube.com/watch?v=tInCbMNqRxo', 'start')}
                 </td>
               </tr>
 
-               {/* <tr>
+              {/* <tr>
                 <th>Custom URL</th>
                 <td>
                   <input ref={input => { this.urlInput = input }} type='text' placeholder='Enter URL' />
                   <button onClick={() => this.setState({ url: this.urlInput.value })}>Load</button>
                 </td>
               </tr>  */}
-            </tbody></table>
+            </tbody>
+          </table>
 
         </section>
 
