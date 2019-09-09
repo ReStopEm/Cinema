@@ -1,0 +1,20 @@
+.form-content{
+   
+    background: url(../../image/telo.jpg) no-repeat;
+    background-size:contain;
+    width: 400px;
+    height: 300px;
+}
+.left{
+    margin-left: 750px;
+    width: 400px;
+    height: 300px;
+    margin-top: -400px;
+}
+.text{
+    margin-left: 350px;
+    color: white;
+}
+.text_g{
+    color: white;
+}
