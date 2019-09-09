@@ -36,6 +36,6 @@ export function login(data) {
 
 export function register(data) {
     return dispatch => {
-        return axios.post('api/account/register', data);
+        return axios.post('api/Account/register', data);
     }
 }

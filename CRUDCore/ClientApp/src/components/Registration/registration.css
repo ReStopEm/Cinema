@@ -6,12 +6,9 @@
     background-size:contain;
     height: 600px;
 }
-input{
-    border-radius:1.5rem;
-}
+
 .btnSubmit
 {
-    float: right;
     border:none;
     border-radius:1.5rem;
     padding: 1%;
@@ -19,10 +16,13 @@ input{
     cursor: pointer;
     background: -webkit-linear-gradient(right, #1d3655, #000000);
     color: #fff;
+    margin-top:100px;
+    margin-left:450px;
+
 }
-.row{
-    float: right;
+#row{
     margin: 5px;
-    margin-top: 150px;
-    margin-right: 150px;
+    margin-top: 60px;
+    margin-left: 60%;
+    width: 200px;
 }

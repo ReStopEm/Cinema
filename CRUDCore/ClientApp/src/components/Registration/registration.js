@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import { connect } from "react-redux";
 import { Redirect } from "react-router";
-
+import { register } from "../../action/authAction";
+import './registration.css';
 class SignUpForm extends Component {
 
     state = {
@@ -48,9 +50,9 @@ class SignUpForm extends Component {
 
         const isValid = Object.keys(errors).length === 0
         if (isValid) {
-            const {password,  } = this.state;
+            const {password, name} = this.state;
             this.setState({ isLoading: true });
-            this.props.register({ Password: password })
+            this.props.register({Name:name, Password: password })
                 .then(
                     ()=> {
                         this.setState({ done: true });
@@ -66,8 +68,7 @@ class SignUpForm extends Component {
     render() {
         const { errors, isLoading } = this.state;
         const form = (
-            <form onSubmit={this.onSubmitForm} style={{ textAlign: 'center' }} >
-                <h1>Sign Up</h1>
+            <form onSubmit={this.onSubmitForm} style={{ textAlign: 'center' }} id="form-content">
 
                 {
                     !!errors.invalid ?
@@ -76,34 +77,46 @@ class SignUpForm extends Component {
                     </div> : ''}
 
 
-                <div className={classnames('form-group', { 'has-error': !!errors.name })}>
-                    <label htmlFor="name">Name</label>
+                <div id="row" className={classnames('form-group', { 'has-error': !!errors.name })}>
                     <input type="text"
                         className="form-control"
                         id="name"
                         name="name"
+                        placeholder="Name"
                         value={this.state.name}
                         onChange={this.handleChange} />
                     {!!errors.name ? <span className="help-block">{errors.name}</span> : ''}
                 </div>
 
-
-
-                <div className={classnames('form-group', { 'has-error': !!errors.password })}>
-                    <label htmlFor="password">Password</label>
+               
+                <div id="row" className={classnames('form-group', { 'has-error': !!errors.password })}>
                     <input type="password"
                         className="form-control"
                         id="password"
                         name="password"
                         value={this.state.password}
+                        placeholder="Password"
                         onChange={this.handleChange} />
                     {!!errors.password ? <span className="help-block">{errors.password}</span> : ''}
                 </div>
 
 
+                <div id="row" className={classnames('form-group', { 'has-error': !!errors.confPassword })}>
+                    <input type="password"
+                        className="form-control"
+                        id="confPassword"
+                        name="confPassword"
+                        value={this.state.confPassword}
+                        placeholder="confPassword"
+                        onChange={this.handleChange} />
+                    {!!errors.confPassword ? <span className="help-block">{errors.confPassword}</span> : ''}
+                </div>
+
+
+
                 <div className="form-group">
                     <div className="col-md-12" >
-                        <button type="submit" className="btn btn-warning"
+                        <button type="submit" className="btnSubmit"
                             disabled={isLoading}>Sign Up <span className="glyphicon glyphicon-send"></span></button>
                     </div>
                 </div>
@@ -123,4 +136,4 @@ SignUpForm.propTypes = {
     register: PropTypes.func.isRequired
 }
 
-export default SignUpForm 
+export default  connect(null, { register })(SignUpForm);
