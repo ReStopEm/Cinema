@@ -167,13 +167,16 @@ class Application extends Component {
                     </div>
                   </div>
                   <br /><br /><br /><br />
-                  <br /><br /><br /><br />
+                  
                 </form>
               </td>
             </tr>
           </table>
           <div className='player-wrapper'>
-            <button className="center"  onClick={() => this.setState({ url: 'https://www.youtube.com/watch?v=tInCbMNqRxo'})}>start</button>
+            <div class="module-button-hide">
+              <input id="button" type="checkbox" />
+              <label className="center"  onClick={(event) => this.setState({ url: 'https://www.youtube.com/watch?v=tInCbMNqRxo' })} for="button">Начать просмотер       🠾</label>
+            </div>
             <ReactPlayer
               ref={this.ref}
               className='react-player'

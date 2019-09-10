@@ -8,7 +8,7 @@ class NavMenu extends Component {
             <header>
                 <nav className="navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow mb-3 navbar navbar-light">
                     <div className="container">
-                        <Link className="text-light nav-link" to="/">WebBlog</Link>
+                        <Link className="text-light nav-link" to="/">CiNeMa</Link>
                         <button type="button" className="mr-2 navbar-toggler">
                             <span className="navbar-toggler-icon"></span>
                         </button>
