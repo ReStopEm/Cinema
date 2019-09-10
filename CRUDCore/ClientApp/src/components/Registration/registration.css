@@ -16,13 +16,13 @@
     cursor: pointer;
     background: -webkit-linear-gradient(right, #1d3655, #000000);
     color: #fff;
-    margin-top:100px;
-    margin-left:450px;
+    margin-top:60px;
+    margin-left:455px;
 
 }
 #row{
     margin: 5px;
     margin-top: 60px;
-    margin-left: 60%;
+    margin-left: 62%;
     width: 200px;
 }

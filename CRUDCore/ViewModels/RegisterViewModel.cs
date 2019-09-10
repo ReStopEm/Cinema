@@ -9,11 +9,8 @@ namespace CRUDCore.ViewModels
     public class RegisterViewModel
     {
         [Required(ErrorMessage = "Поле є обов'язковим")]
-        [EmailAddress(ErrorMessage = "Не валідна пошта")]
-        public string Email { get; set; }
+        public string Name { get; set; }
         [Required(ErrorMessage = "Поле є обов'язковим")]
         public string Password { get; set; }
-        [Required(ErrorMessage = "Поле є обов'язковим")]
-        public string Image { get; set; }
     }
 }

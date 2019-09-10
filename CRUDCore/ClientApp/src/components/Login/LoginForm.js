@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { connect } from "react-redux";
 import { Redirect } from "react-router";
 import { login } from "../../action/authAction";
-import './login.css';
+import "./login.css";
 class LoginPage extends Component {
     state = {
         name: '',
@@ -60,7 +60,7 @@ class LoginPage extends Component {
     render() {
         const { errors, isLoading } = this.state;
         const form = (
-            <form onSubmit={this.onSubmitForm} style={{ textAlign: 'center' }} id="form-content">
+            <form onSubmit={this.onSubmitForm} id="form-content2">
 
             {
                 !!errors.invalid ?
@@ -69,7 +69,7 @@ class LoginPage extends Component {
                 </div> : ''}
 
 
-            <div id="row" className={classnames('form-group', { 'has-error': !!errors.name })}>
+            <div id="row2" className={classnames('form-group', { 'has-error': !!errors.name })}>
                 <input type="text"
                     className="form-control"
                     id="name"
@@ -82,7 +82,7 @@ class LoginPage extends Component {
 
 
 
-            <div id="row" className={classnames('form-group', { 'has-error': !!errors.password })}>
+            <div id="row2" className={classnames('form-group', { 'has-error': !!errors.password })}>
                 <input type="password"
                     className="form-control"
                     id="password"
@@ -96,7 +96,7 @@ class LoginPage extends Component {
 
             <div className="form-group">
                 <div className="col-md-12" >
-                    <button type="submit" className="btnSubmit"
+                    <button type="submit" className="btnSubmit2"
                         disabled={isLoading}>Sign Up <span className="glyphicon glyphicon-send"></span></button>
                 </div>
             </div>
