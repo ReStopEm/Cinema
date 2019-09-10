@@ -89,7 +89,7 @@ export default class ReactPlayer extends Component {
         return Player
       }
     }
-    // Fall back to FilePlayer if nothing else can play the URL
+    
     return FilePlayer
   }
   wrapperRef = wrapper => {
@@ -112,7 +112,7 @@ export default class ReactPlayer extends Component {
     )
   }
   sortPlayers (a, b) {
-    // Retain player order to prevent weird iframe behaviour when switching players
+    
     if (a && b) {
       return a.key < b.key ? -1 : 1
     }

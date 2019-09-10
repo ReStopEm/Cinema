@@ -126,6 +126,7 @@ class Application extends Component {
   ref = player => {
     this.player = player
   }
+
   render() {
     const { url, playing, controls, light, volume, muted, loop, played, loaded, duration, playbackRate, pip } = this.state
     const SEPARATOR = ' · '
@@ -153,8 +154,8 @@ class Application extends Component {
                       Время:&nbsp;01:40:23
                       Цикл:&nbsp;Фильмы&nbsp;про&nbsp;преступников
                       Доп.язык озвучки:&nbsp;Английский
-                      В&nbsp;главных&nbsp;ролях:&nbsp;Колин&nbsp;Фаррелл,Кира&nbsp;Найтли,Рэй&nbsp;<br/>Уинстон,Дэвид&nbsp;Тьюлис,Анна&nbsp;Фрил,Бен&nbsp;Чаплин, 
-                      Эдди&nbsp;Марсан,Санджив&nbsp;Бхаскар,&nbsp;Стивен&nbsp;Грэм,<br/>Офелия&nbsp;Ловибонд
+                      В&nbsp;главных&nbsp;ролях:&nbsp;Колин&nbsp;Фаррелл,Кира&nbsp;Найтли,Рэй&nbsp;<br />Уинстон,Дэвид&nbsp;Тьюлис,Анна&nbsp;Фрил,Бен&nbsp;Чаплин,
+                      Эдди&nbsp;Марсан,Санджив&nbsp;Бхаскар,&nbsp;Стивен&nbsp;Грэм,<br />Офелия&nbsp;Ловибонд
                      </p>
                   </div>
                   <p className="text_g">Гангстер по имени Митчелл знакомится с очаровательной киноактрисой Шарлоттой, которая является очень ранимой натурой, поэтому вынуждена всегда скрываться от папараци и прочих преследователей. Митч отчаянно хочет порвать со своим прошлым и находит утешение в этой милой девушке, для которой готов сделать все. Однако, криминальный мир не спешит расставаться с таким профессионалом, как Митч. Все начинается с того, что несколько головорезов убивают его лучшего друга и теперь Митч берется за их поиски. А через некоторое время криминальный магнат города Роб Гант совершает убийство на глазах Митча, делая его соучастником преступления. Теперь Гант любыми способами намерен вернуть Митча к себе в команду.
@@ -164,72 +165,72 @@ class Application extends Component {
                     <div className="embed-responsive embed-responsive-4by3">
                       <iframe class="embed-responsive-item" src="//www.youtube.com/embed/tInCbMNqRxo"></iframe>
                     </div>
-                  </div> 
+                  </div>
                   <br /><br /><br /><br />
                   <br /><br /><br /><br />
-                    </form>
-               </td>
+                </form>
+              </td>
             </tr>
           </table>
-            <div className='player-wrapper'>
-
-              <ReactPlayer
-                ref={this.ref}
-                className='react-player'
-                width='100%'
-                height='100%'
-                url={url}
-                pip={pip}
-                playing={playing}
-                controls={controls}
-                light={light}
-                loop={loop}
-                playbackRate={playbackRate}
-                volume={volume}
-                muted={muted}
-                onReady={() => console.log('onReady')}
-                onStart={() => console.log('onStart')}
-                onPlay={this.onPlay}
-                onEnablePIP={this.onEnablePIP}
-                onDisablePIP={this.onDisablePIP}
-                onPause={this.onPause}
-                onBuffer={() => console.log('onBuffer')}
-                onSeek={e => console.log('onSeek', e)}
-                onEnded={this.onEnded}
-                onError={e => console.log('onError', e)}
-                onProgress={this.onProgress}
-                onDuration={this.onDuration}
-              />
-            </div>
+          <div className='player-wrapper'>
+            <button className="center"  onClick={() => this.setState({ url: 'https://www.youtube.com/watch?v=tInCbMNqRxo'})}>start</button>
+            <ReactPlayer
+              ref={this.ref}
+              className='react-player'
+              width='100%'
+              height='100%'
+              url={url}
+              pip={pip}
+              playing={playing}
+              controls={controls}
+              light={light}
+              loop={loop}
+              playbackRate={playbackRate}
+              volume={volume}
+              muted={muted}
+              onReady={() => console.log('onReady')}
+              onStart={() => console.log('onStart')}
+              onPlay={this.onPlay}
+              onEnablePIP={this.onEnablePIP}
+              onDisablePIP={this.onDisablePIP}
+              onPause={this.onPause}
+              onBuffer={() => console.log('onBuffer')}
+              onSeek={e => console.log('onSeek', e)}
+              onEnded={this.onEnded}
+              onError={e => console.log('onError', e)}
+              onProgress={this.onProgress}
+              onDuration={this.onDuration}
+            />
+          </div>
 
 
         </section>
-          <section className='section'>
-            <table>
-              <tbody>
+        <section className='section'>
+          <table>
+            <tbody>
 
-                <tr>
-                  <th>YouTube</th>
-                  <td>
-                    {this.renderLoadButton('https://www.youtube.com/watch?v=tInCbMNqRxo', 'start')}
-                  </td>
-                </tr>
+              <tr>
+                <th>YouTube</th>
+                <td>
+                  {/* {this.renderLoadButton('https://www.youtube.com/watch?v=tInCbMNqRxo', 'start')} */}
 
-                {/* <tr>
+                </td>
+              </tr>
+              {/* <tr>
                 <th>Custom URL</th>
                 <td>
                   <input ref={input => { this.urlInput = input }} type='text' placeholder='Enter URL' />
                   <button onClick={() => this.setState({ url: this.urlInput.value })}>Load</button>
                 </td>
               </tr>  */}
-              </tbody>
-            </table>
+            </tbody>
+          </table>
 
-          </section>
+        </section>
 
       </div>
-        )
-      }
-    }
-    
+    )
+  }
+}
+
 export default hot(module)(Application)

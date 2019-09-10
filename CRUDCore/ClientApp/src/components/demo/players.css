@@ -18,3 +18,21 @@
 .text_g{
     color: white;
 }
+.center{
+    margin-left: 185px;
+    display: inline-block;
+    font-weight: 700;
+    background-color: rgba(49, 49, 49, 0.616);
+    color: white;
+    text-decoration: none;
+    user-select: none;
+    padding: .5em 2em;
+    outline: none;
+    border: 2px solid;
+    border-radius: 1px;
+    transition: 0.2s;
+    position: relative; /* Относительное позиционирование */
+    top: 200px; /* Сдвигаем текст вверх */
+    left: 50px; /* Сдвигаем текст вправо */
+    
+}

@@ -14,7 +14,7 @@ export default class Player extends Component {
   mounted = false
   isReady = false
   isPlaying = false
-  isLoading = true // Use isLoading to prevent onPause when switching URL
+  isLoading = true 
   loadOnReady = null
   startOnPlay = true
   seekOnPlay = null
@@ -69,7 +69,7 @@ export default class Player extends Component {
       } else {
         this.player.unmute()
         if (nextProps.volume !== null) {
-          // Set volume next tick to fix a bug with DailyMotion
+         
           setTimeout(() => this.player.setVolume(nextProps.volume))
         }
       }
@@ -111,7 +111,7 @@ export default class Player extends Component {
           progress.loadedSeconds = loadedSeconds
           progress.loaded = loadedSeconds / duration
         }
-        // Only call onProgress if values have changed
+     
         if (progress.playedSeconds !== this.prevPlayed || progress.loadedSeconds !== this.prevLoaded) {
           this.props.onProgress(progress)
         }
@@ -122,7 +122,7 @@ export default class Player extends Component {
     this.progressTimeout = setTimeout(this.progress, this.props.progressFrequency || this.props.progressInterval)
   }
   seekTo (amount, type) {
-    // When seeking before player is ready, store value and seek later
+    
     if (!this.isReady && amount !== 0) {
       this.seekOnPlay = amount
       setTimeout(() => { this.seekOnPlay = null }, SEEK_ON_PLAY_EXPIRY)
@@ -130,7 +130,7 @@ export default class Player extends Component {
     }
     const isFraction = !type ? (amount > 0 && amount < 1) : type === 'fraction'
     if (isFraction) {
-      // Convert fraction to seconds based on duration
+     
       const duration = this.player.getDuration()
       if (!duration) {
         console.warn('ReactPlayer: could not seek using fraction – duration not yet available')
@@ -209,8 +209,7 @@ export default class Player extends Component {
     }
   }
   onLoaded = () => {
-    // Sometimes we know loading has stopped but onReady/onPlay are never called
-    // so this provides a way for players to avoid getting stuck
+    
     this.isLoading = false
   }
   ref = player => {

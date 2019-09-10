@@ -62,7 +62,7 @@ export class YouTube extends Component {
         events: {
           onReady: () => {
             if (loop) {
-              this.player.setLoop(true) // Enable playlist looping
+              this.player.setLoop(true) 
             }
             this.props.onReady()
           },
@@ -85,7 +85,7 @@ export class YouTube extends Component {
     if (data === ENDED) {
       const isPlaylist = !!this.callPlayer('getPlaylist')
       if (loop && !isPlaylist) {
-        this.play() // Only loop manually if not playing a playlist
+        this.play() 
       }
       onEnded()
     }
