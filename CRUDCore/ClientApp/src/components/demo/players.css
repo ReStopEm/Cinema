@@ -1,0 +1,63 @@
+.form-content{
+   
+    background: url(../../image/telo.jpg) no-repeat;
+    background-size:contain;
+    width: 400px;
+    height: 300px;
+}
+.left{
+    margin-left: 750px;
+    width: 400px;
+    height: 300px;
+    margin-top: -400px;
+}
+.text{
+    margin-left: 350px;
+    color: white;
+}
+.text_g{
+    color: white;
+}
+.center{
+    margin-left: 185px;
+    display: inline-block;
+    font-weight: 700;
+    background-color: rgba(49, 49, 49, 0.616);
+    color: white;
+    text-decoration: none;
+    user-select: none;
+    padding: .5em 2em;
+    outline: none;
+    border: 2px solid;
+    border-radius: 1px;
+    transition: 0.2s;
+    position: relative; 
+    top: 190px; 
+    
+}
+.module-button-hide {
+    display: inline-block;
+    margin-top: 50px;
+  }
+  .module-button-hide > input[type="checkbox"] {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+  }
+  .module-button-hide > input[type="checkbox"]:checked ~ label {
+    
+    opacity: 0;
+    display: none 
+  }
+  .module-button-hide > label {
+    padding: 5px;
+    border: 2px solid #000;
+    box-shadow: 2px 2px #000;
+    cursor: pointer;
+    transition: .3s;
+  }
+  .module-button-hide > label:hover {
+    box-shadow: 3px 3px #000;
+  }
+  .module-button-hide > label:active {
+    box-shadow: 0px 0px #000;
+  }

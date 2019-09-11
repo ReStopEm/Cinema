@@ -19,11 +19,12 @@ class Home extends Component {
     }
     render() {
         return (
-            <div>
-
+            <div class="container-fluid">
                 <li className="nav-item">
-                    <Link style={{color: 'white'}} className="text-light nav-link"  to="/Application" >Телохранитель</Link>
                     
+                    <Link style={{ color: 'white' }} className="text-light nav-link" to="/Application" >Телохранитель</Link>
+                    {/* <p className="foto" /> */}
+                    <Link style={{ color: 'white' }} className="foto" to="/Application" ></Link>
                 </li>
 
                 <div className="row text-center text-lg-left">

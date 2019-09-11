@@ -7,6 +7,7 @@ import './reset.css'
 import './defaults.css'
 import './range.css'
 import './App.css'
+import './players.css'
 
 import ReactPlayer from '../../ReactPlayer'
 import Duration from './Duration'
@@ -25,7 +26,7 @@ class Application extends Component {
     controls: true,
     light: false,
     volume: 0.8,
-    muted: false,
+    muted: true,
     played: 0,
     loaded: 0,
     duration: 0,
@@ -125,6 +126,7 @@ class Application extends Component {
   ref = player => {
     this.player = player
   }
+
   render() {
     const { url, playing, controls, light, volume, muted, loop, played, loaded, duration, playbackRate, pip } = this.state
     const SEPARATOR = ' · '
@@ -133,15 +135,48 @@ class Application extends Component {
 
 
       <div className='app'>
+
         <section className='section'>
           <table>
             <tr>
               <td>
-                <p className="filmtext" >Телохранитель</p>
+                <form>
+                  <p className="filmtext" >Телохранитель</p>
+                  <div className="form-content" >
+                    <p className="text" >
+                      Название:&nbsp;Телохранитель
+                      Оригинальное&nbsp;название:&nbsp;London&nbsp;Boulevard
+                      Год:&nbsp;2010
+                      Страна:&nbsp;США,&nbsp;Великобритания
+                      Слоган:&nbsp;«Not&nbsp;every&nbsp;criminal&nbsp;wants&nbsp;to&nbsp;be&nbsp;one.»
+                      Режиссер:&nbsp;Уильям&nbsp;Монахэн
+                      Жанр:&nbsp;Драмы,Криминальные
+                      Время:&nbsp;01:40:23
+                      Цикл:&nbsp;Фильмы&nbsp;про&nbsp;преступников
+                      Доп.язык озвучки:&nbsp;Английский
+                      В&nbsp;главных&nbsp;ролях:&nbsp;Колин&nbsp;Фаррелл,Кира&nbsp;Найтли,Рэй&nbsp;<br />Уинстон,Дэвид&nbsp;Тьюлис,Анна&nbsp;Фрил,Бен&nbsp;Чаплин,
+                      Эдди&nbsp;Марсан,Санджив&nbsp;Бхаскар,&nbsp;Стивен&nbsp;Грэм,<br />Офелия&nbsp;Ловибонд
+                     </p>
+                  </div>
+                  <p className="text_g">Гангстер по имени Митчелл знакомится с очаровательной киноактрисой Шарлоттой, которая является очень ранимой натурой, поэтому вынуждена всегда скрываться от папараци и прочих преследователей. Митч отчаянно хочет порвать со своим прошлым и находит утешение в этой милой девушке, для которой готов сделать все. Однако, криминальный мир не спешит расставаться с таким профессионалом, как Митч. Все начинается с того, что несколько головорезов убивают его лучшего друга и теперь Митч берется за их поиски. А через некоторое время криминальный магнат города Роб Гант совершает убийство на глазах Митча, делая его соучастником преступления. Теперь Гант любыми способами намерен вернуть Митча к себе в команду.
+Смотрите онлайн фильм «Телохранитель» в хорошем HD качестве на нашем сайте, бесплатно и без регистрации.</p>
+                  {/*class="embed-responsive embed-responsive-4by3"  */}
+                  <div class="left">
+                    <div className="embed-responsive embed-responsive-4by3">
+                      <iframe class="embed-responsive-item" src="//www.youtube.com/embed/tInCbMNqRxo"></iframe>
+                    </div>
+                  </div>
+                  <br /><br /><br /><br />
+                  
+                </form>
               </td>
             </tr>
           </table>
           <div className='player-wrapper'>
+            <div class="module-button-hide">
+              <input id="button" type="checkbox" />
+              <label className="center"  onClick={(event) => this.setState({ url: 'https://www.youtube.com/watch?v=tInCbMNqRxo' })} for="button">Начать просмотер       🠾</label>
+            </div>
             <ReactPlayer
               ref={this.ref}
               className='react-player'
@@ -176,21 +211,23 @@ class Application extends Component {
         <section className='section'>
           <table>
             <tbody>
+
               <tr>
                 <th>YouTube</th>
                 <td>
-                  {this.renderLoadButton('https://www.youtube.com/watch?v=F2RrtTaTX-M','start')}
+                  {/* {this.renderLoadButton('https://www.youtube.com/watch?v=tInCbMNqRxo', 'start')} */}
+
                 </td>
               </tr>
-
-               {/* <tr>
+              {/* <tr>
                 <th>Custom URL</th>
                 <td>
                   <input ref={input => { this.urlInput = input }} type='text' placeholder='Enter URL' />
                   <button onClick={() => this.setState({ url: this.urlInput.value })}>Load</button>
                 </td>
               </tr>  */}
-            </tbody></table>
+            </tbody>
+          </table>
 
         </section>
 
