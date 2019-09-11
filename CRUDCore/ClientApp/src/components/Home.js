@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import classnames from 'classnames';
 import './Modal.css';
-import PropTypes from 'prop-types';
-import get from 'lodash.get';
 import { Link } from "react-router-dom";
 class Home extends Component {
     state = {
@@ -32,12 +28,6 @@ class Home extends Component {
     }
 }
 
-const mapStateProps = (state) => {
-    return {
-        list: get(state, 'animal.list.data'),
-        isListLoading: get(state, 'animal.list.loading'),
-        isListError: get(state, 'animal.list.error')
-    }
-}
 
-export default connect(mapStateProps)(Home);
+
+export default Home;
