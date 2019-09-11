@@ -179,7 +179,7 @@ class Application extends Component {
               <tr>
                 <th>YouTube</th>
                 <td>
-                  {this.renderLoadButton('https://www.youtube.com/watch?v=tInCbMNqRxo','start')}
+                  {this.renderLoadButton('https://www.youtube.com/watch?v=F2RrtTaTX-M','start')}
                 </td>
               </tr>
 
