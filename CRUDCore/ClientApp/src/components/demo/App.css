@@ -24,11 +24,13 @@ $gutter-width: 20px;
 .player-wrapper {
   width: 580px;
   height: 370px;
+  
+ 
 }
 
 .react-player {
   margin-bottom: 10px;
-  background: rgba(0, 0, 0, .1);
+  background: rgb(3, 1, 1);
 }
 
 .faded {

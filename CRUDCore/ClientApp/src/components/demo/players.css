@@ -19,25 +19,26 @@
     color: white;
 }
 .center{
-    margin-left: 185px;
+    margin-left: 150px;
     display: inline-block;
     font-weight: 700;
-    background-color: rgba(49, 49, 49, 0.616);
+    background-color: rgba(255, 255, 255, 0);
     color: white;
     text-decoration: none;
     user-select: none;
     padding: .5em 2em;
     outline: none;
-    border: 2px solid;
-    border-radius: 1px;
+    border-radius: 1000px;
     transition: 0.2s;
     position: relative; 
-    top: 190px; 
+    top: 210px; 
+    font-size: 30px;
     
 }
 .module-button-hide {
     display: inline-block;
     margin-top: 50px;
+    
   }
   .module-button-hide > input[type="checkbox"] {
     position: absolute;
@@ -50,7 +51,7 @@
   }
   .module-button-hide > label {
     padding: 5px;
-    border: 2px solid #000;
+    border: 2px solid rgb(255, 255, 255);
     box-shadow: 2px 2px #000;
     cursor: pointer;
     transition: .3s;
