@@ -10,13 +10,7 @@ import './App.css'
 import './players.css'
 
 import ReactPlayer from '../../ReactPlayer'
-import Duration from './Duration'
 
-const MULTIPLE_SOURCES = [
-  { src: 'http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4', type: 'video/mp4' },
-  { src: 'http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv', type: 'video/ogv' },
-  { src: 'http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm', type: 'video/webm' }
-]
 
 class Application extends Component {
   state = {
@@ -128,8 +122,7 @@ class Application extends Component {
   }
 
   render() {
-    const { url, playing, controls, light, volume, muted, loop, played, loaded, duration, playbackRate, pip } = this.state
-    const SEPARATOR = ' · '
+    const { url, playing, controls, light, volume, muted, loop, playbackRate, pip } = this.state
 
     return (
 
@@ -138,6 +131,7 @@ class Application extends Component {
 
         <section className='section'>
           <table>
+            <tbody>
             <tr>
               <td>
                 <form>
@@ -161,9 +155,9 @@ class Application extends Component {
                   <p className="text_g">Гангстер по имени Митчелл знакомится с очаровательной киноактрисой Шарлоттой, которая является очень ранимой натурой, поэтому вынуждена всегда скрываться от папараци и прочих преследователей. Митч отчаянно хочет порвать со своим прошлым и находит утешение в этой милой девушке, для которой готов сделать все. Однако, криминальный мир не спешит расставаться с таким профессионалом, как Митч. Все начинается с того, что несколько головорезов убивают его лучшего друга и теперь Митч берется за их поиски. А через некоторое время криминальный магнат города Роб Гант совершает убийство на глазах Митча, делая его соучастником преступления. Теперь Гант любыми способами намерен вернуть Митча к себе в команду.
 Смотрите онлайн фильм «Телохранитель» в хорошем HD качестве на нашем сайте, бесплатно и без регистрации.</p>
                   {/*class="embed-responsive embed-responsive-4by3"  */}
-                  <div class="left">
+                  <div className="left">
                     <div className="embed-responsive embed-responsive-4by3">
-                      <iframe class="embed-responsive-item" src="//www.youtube.com/embed/F2RrtTaTX-M"></iframe>
+                      <iframe title="asd" className="embed-responsive-item" src="//www.youtube.com/embed/F2RrtTaTX-M"/>
                     </div>
                   </div>
                   <br /><br /><br /><br />
@@ -171,11 +165,12 @@ class Application extends Component {
                 </form>
               </td>
             </tr>
+            </tbody>
           </table>
           <div className='player-wrapper'>
-            <div class="module-button-hide">
+            <div className="module-button-hide">
               <input id="button" type="checkbox" />
-              <label className="center"  onClick={(event) => this.setState({ url: 'https://www.youtube.com/watch?v=tInCbMNqRxo' })} for="button">Начать просмотер       🠾</label>
+              <label className="center"  onClick={(event) => this.setState({ url: 'https://www.youtube.com/watch?v=tInCbMNqRxo' })} htmlFor="button">Начать просмотер       🠾</label>
             </div>
             <ReactPlayer
               ref={this.ref}

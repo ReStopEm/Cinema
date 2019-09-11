@@ -31,6 +31,7 @@ namespace CRUDCore.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody]RegisterViewModel credentials)
         {
+            https://localhost:44314/
             if (!ModelState.IsValid)
             {
                 var errrors = CustomValidator.GetErrorsByModel(ModelState);
