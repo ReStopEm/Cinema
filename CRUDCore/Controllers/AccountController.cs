@@ -31,7 +31,7 @@ namespace CRUDCore.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody]RegisterViewModel credentials)
         {
-            https://localhost:44314/
+           
             if (!ModelState.IsValid)
             {
                 var errrors = CustomValidator.GetErrorsByModel(ModelState);
@@ -39,8 +39,9 @@ namespace CRUDCore.Controllers
             }
             var user = new DbUser
             {
-                UserName = credentials.Name,
-                PasswordHash = credentials.Password
+                Email = credentials.Name,
+                UserName = credentials.Name//,
+                //PasswordHash = credentials.Password
             };
 
             var result = await _userManager.CreateAsync(user, credentials.Password);
@@ -78,7 +79,8 @@ namespace CRUDCore.Controllers
             var claims = new Claim[]
             {
                 new Claim("id", user.Id.ToString()),
-                new Claim("name", user.UserName)
+                new Claim("name", user.UserName),
+                new Claim("email", user.Email),
             };
 
             var signingKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("this is the secret phrase"));
