@@ -122,7 +122,7 @@ class Application extends Component {
   }
 
   render() {
-    const { url, playing, controls, light, volume, muted, loop, played, loaded, duration, playbackRate, pip } = this.state
+    const { url, playing, controls, light, volume, muted, loop,playbackRate, pip } = this.state
     
 
     return (
