@@ -4,8 +4,9 @@ import Home from './components/Home';
 import Layout from './components/Layout';
 import LoginPage from './components/Login/LoginPage';
 import registration from './components/Registration/registration';
-import Application from './components/demo/Application'
+import Application from './components/demo/Application';
 import { Helmet } from 'react-helmet';
+import film from './components/demo/film';
 function App() {
   return (
 
@@ -18,6 +19,7 @@ function App() {
         <Route exact path='/login' component={LoginPage} />
         <Route exact path='/Application' component={Application} />
         <Route exact path='/registration' component={registration} />
+        <Route exact path='/film' component={film} />
 
       </Switch>
     </Layout>

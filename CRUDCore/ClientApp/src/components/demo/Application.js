@@ -20,7 +20,7 @@ class Application extends Component {
     controls: true,
     light: false,
     volume: 0.8,
-    muted: true,
+    muted: false,
     played: 0,
     loaded: 0,
     duration: 0,
@@ -200,9 +200,7 @@ class Application extends Component {
               onProgress={this.onProgress}
               onDuration={this.onDuration}
             />
-          </div>
-
-
+          </div>\ 
         </section>
         <section className='section'>
           <table>
@@ -215,14 +213,14 @@ class Application extends Component {
 
                 </td>
               </tr>
-              {/* <tr>
+               <tr>
                 <th>Custom URL</th>
                 <td>
                   <input ref={input => { this.urlInput = input }} type='text' placeholder='Enter URL' />
-                  <button onClick={() => this.setState({ url: this.urlInput.value })}>Load</button>
+                  <button onClick={() => this.setState({ url: 'https://www.youtube.com/watch?v=TqrgAM_8FvA' })}>Load</button>
                 </td>
-              </tr>  */}
-            </tbody>
+              </tr>  
+            </tbody> 
           </table>
 
         </section>
