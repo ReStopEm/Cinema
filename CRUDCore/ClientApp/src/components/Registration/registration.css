@@ -4,7 +4,7 @@
     margin-bottom: 2%;
     background: url(./Images/container-bg.png) no-repeat;
     background-size:contain;
-    height: 600px;
+    height: 700px;
 }
 
 .btnSubmit
@@ -17,12 +17,11 @@
     background: -webkit-linear-gradient(right, #1d3655, #000000);
     color: #fff;
     margin-top:60px;
-    margin-left:455px;
+    margin-left:77%;
 
 }
 #row{
-    margin: 5px;
-    margin-top: 60px;
-    margin-left: 62%;
+    margin-top : 68px;
+    margin-left: 77%;
     width: 200px;
 }

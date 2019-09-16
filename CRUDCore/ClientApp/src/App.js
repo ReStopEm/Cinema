@@ -15,8 +15,8 @@ function App() {
       </Helmet>
       <Switch>
         <Route exact path='/' component={Home} />
-        <Route exact path='/login' component={LoginPage} />
         <Route exact path='/Application' component={Application} />
+        <Route exact path='/login' component={LoginPage} />
         <Route exact path='/registration' component={registration} />
 
       </Switch>

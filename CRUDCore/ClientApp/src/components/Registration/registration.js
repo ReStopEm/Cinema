@@ -8,6 +8,7 @@ import './registration.css';
 class SignUpForm extends Component {
 
     state = {
+        email:'',
         name: '',
         password: '',
         confPassword: '',
@@ -43,6 +44,7 @@ class SignUpForm extends Component {
     onSubmitForm = (e) => {
         e.preventDefault();
         let errors = {};
+        if (this.state.email === '') errors.email = "Can't be empty!"
         if (this.state.name === '') errors.name = "Can't be empty!"
         if (this.state.password === '') errors.password = "Can't be empty!"
         if (this.state.confPassword === '') errors.confPassword = "Can't be empty!"
@@ -50,9 +52,9 @@ class SignUpForm extends Component {
 
         const isValid = Object.keys(errors).length === 0
         if (isValid) {
-            const {password, name} = this.state;
+            const {password, name,email} = this.state;
             this.setState({ isLoading: true });
-            this.props.register({Name:name, Password: password })
+            this.props.register({Name:name, Password: password,Email:email })
                 .then(
                     ()=> {
                         this.setState({ done: true });
@@ -80,12 +82,22 @@ class SignUpForm extends Component {
                 <div id="row" className={classnames('form-group', { 'has-error': !!errors.name })}>
                     <input type="text"
                         className="form-control"
+                        id="email"
+                        name="email"
+                        placeholder="Email"
+                        value={this.state.email}
+                        onChange={this.handleChange} />
+                </div>
+
+
+                <div id="row" className={classnames('form-group', { 'has-error': !!errors.name })}>
+                    <input type="text"
+                        className="form-control"
                         id="name"
                         name="name"
                         placeholder="Name"
                         value={this.state.name}
                         onChange={this.handleChange} />
-                    {!!errors.name ? <span className="help-block">{errors.name}</span> : ''}
                 </div>
 
                
@@ -97,7 +109,6 @@ class SignUpForm extends Component {
                         value={this.state.password}
                         placeholder="Password"
                         onChange={this.handleChange} />
-                    {!!errors.password ? <span className="help-block">{errors.password}</span> : ''}
                 </div>
 
 
@@ -109,7 +120,6 @@ class SignUpForm extends Component {
                         value={this.state.confPassword}
                         placeholder="confPassword"
                         onChange={this.handleChange} />
-                    {!!errors.confPassword ? <span className="help-block">{errors.confPassword}</span> : ''}
                 </div>
 
 
