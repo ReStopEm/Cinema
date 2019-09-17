@@ -63,3 +63,8 @@
   float: right;
   margin-top: -300px;
 }
+.border{
+  border: 4px double black;
+  background: rgba(61, 61, 61, 0.479); 
+  padding: 10px; 
+}
