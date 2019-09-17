@@ -39,7 +39,7 @@ namespace CRUDCore.Controllers
             }
             var user = new DbUser
             {
-                Email = credentials.Name,
+                Email = credentials.Email,
                 UserName = credentials.Name//,
                 //PasswordHash = credentials.Password
             };
