@@ -15,7 +15,7 @@ class Home extends Component {
     }
     render() {
         return (
-            <div className="container-fluid">
+            <div className="border">
                 <li className="nav-item">
                 <Link style={{ color: 'white'}} className="text-light nav-link" to="/Application" >Телохранитель</Link>
                 <Link  className="foto" to="/Application" ></Link>
@@ -32,7 +32,8 @@ class Home extends Component {
                       В&nbsp;главных&nbsp;ролях:&nbsp;Колин&nbsp;Фаррелл,Кира&nbsp;Найтли,Рэй&nbsp;<br />Уинстон,Дэвид&nbsp;Тьюлис,Анна&nbsp;Фрил,Бен&nbsp;Чаплин,
                       Эдди&nbsp;Марсан,Санджив&nbsp;Бхаскар,&nbsp;Стивен&nbsp;Грэм,<br />Офелия&nbsp;Ловибонд<br/><br/>Гангстер по имени Митчелл знакомится с очаровательной киноактрисой Шарлоттой, которая является очень ранимой натурой, поэтому вынуждена всегда скрываться от папараци и прочих преследователей. Митч отчаянно хочет порвать со своим прошлым и находит утешение в этой милой девушке, для которой готов сделать все. Однако, криминальный мир не спешит расставаться с таким профессионалом, как Митч.</p>
                 
-                <br/><br/><br/>
+                <br/>
+                <hr/>
                 <Link style={{ color: 'white'}} className="text-light nav-link" to="/film" >Макс Стіл</Link>
                 <Link  className="foto1" to="/film" ></Link>
                     <p className="text2" >
