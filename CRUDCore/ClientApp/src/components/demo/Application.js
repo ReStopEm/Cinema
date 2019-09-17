@@ -20,7 +20,7 @@ class Application extends Component {
     controls: true,
     light: false,
     volume: 0.8,
-    muted: true,
+    muted: false,
     played: 0,
     loaded: 0,
     duration: 0,
@@ -122,7 +122,8 @@ class Application extends Component {
   }
 
   render() {
-    const { url, playing, controls, light, volume, muted, loop, playbackRate, pip } = this.state
+    const { url, playing, controls, light, volume, muted, loop,playbackRate, pip } = this.state
+    
 
     return (
 
@@ -157,7 +158,7 @@ class Application extends Component {
                   {/*class="embed-responsive embed-responsive-4by3"  */}
                   <div className="left">
                     <div className="embed-responsive embed-responsive-4by3">
-                      <iframe title="asd" className="embed-responsive-item" src="//www.youtube.com/embed/F2RrtTaTX-M"/>
+                      <iframe className="embed-responsive-item" src="//www.youtube.com/embed/WGrRbrRB51c"></iframe>
                     </div>
                   </div>
                   <br /><br /><br /><br />
@@ -170,7 +171,7 @@ class Application extends Component {
           <div className='player-wrapper'>
             <div className="module-button-hide">
               <input id="button" type="checkbox" />
-              <label className="center"  onClick={(event) => this.setState({ url: 'https://www.youtube.com/watch?v=tInCbMNqRxo' })} htmlFor="button">Начать просмотер       🠾</label>
+              <label className="center"  onClick={(event) => this.setState({ url: 'https://www.youtube.com/watch?v=tInCbMNqRxo' })} htmlFor="button">► Начать просмотр</label>
             </div>
             <ReactPlayer
               ref={this.ref}
@@ -199,29 +200,27 @@ class Application extends Component {
               onProgress={this.onProgress}
               onDuration={this.onDuration}
             />
-          </div>
-
-
+          </div>\ 
         </section>
         <section className='section'>
           <table>
             <tbody>
 
               <tr>
-                <th>YouTube</th>
+                
                 <td>
                   {/* {this.renderLoadButton('https://www.youtube.com/watch?v=tInCbMNqRxo', 'start')} */}
 
                 </td>
               </tr>
-              {/* <tr>
+               <tr>
                 <th>Custom URL</th>
                 <td>
                   <input ref={input => { this.urlInput = input }} type='text' placeholder='Enter URL' />
-                  <button onClick={() => this.setState({ url: this.urlInput.value })}>Load</button>
+                  <button onClick={() => this.setState({ url: 'https://www.youtube.com/watch?v=TqrgAM_8FvA' })}>Load</button>
                 </td>
-              </tr>  */}
-            </tbody>
+              </tr>  
+            </tbody> 
           </table>
 
         </section>

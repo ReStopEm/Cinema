@@ -40,6 +40,26 @@
 .foto{
   background: url(../image/telo.jpg) no-repeat;
   background-size:contain;
-  width: 300px;
-  height: 400px;
+  width: 400px;
+  height: 300px;
+  
+}
+.foto1{
+  background: url(../image/max.jpeg) no-repeat;
+  background-size:contain;
+  width: 400px;
+  height: 300px;
+  
+}
+.text1{
+  color: white;
+  margin-left: 350px;
+  float: right;
+  margin-top: -300px;
+}
+.text2{
+  color: white;
+  margin-left: 350px;
+  float: right;
+  margin-top: -300px;
 }
