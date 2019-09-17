@@ -16,8 +16,6 @@ class Home extends Component {
     render() {
         return (
             <div className="border">
-                <li className="nav-item">
-                <Link style={{ color: 'white'}} className="text-light nav-link" to="/Application" >Телохранитель</Link>
                 <Link  className="foto" to="/Application" ></Link>
                 <p className="text1" >Название:&nbsp;Телохранитель<br/>
                       Оригинальное&nbsp;название:&nbsp;London&nbsp;Boulevard<br/>
@@ -34,7 +32,6 @@ class Home extends Component {
                 
                 <br/>
                 <hr/>
-                <Link style={{ color: 'white'}} className="text-light nav-link" to="/film" >Макс Стіл</Link>
                 <Link  className="foto1" to="/film" ></Link>
                     <p className="text2" >
                         Название:&nbsp;Max&nbsp;Steel
@@ -54,8 +51,6 @@ class Home extends Component {
 Подросток вынужден встретиться с единственным существом, способным совладать с такой мощной энергией — таинственным техноорганическим инопланетянином по имени Стил. Эта встреча кардинальным образом изменит жизнь не только нашего мальчика-подростка, но и возможно всего человечества.
 
                     </p>
-                </li>
-            
                 <div className="row text-center text-lg-left">
                 </div>
 

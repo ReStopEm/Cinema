@@ -63,7 +63,7 @@ namespace CRUDCore.Controllers
                 return BadRequest(errrors);
             }
             var result = await _signInManager
-                .PasswordSignInAsync(credentials.Email, credentials.Password, false, false);
+                .PasswordSignInAsync(credentials.Name, credentials.Password, false, false);
             if (!result.Succeeded)
             {
                 return BadRequest(new { invalid = "You entered an invalid credentials" });

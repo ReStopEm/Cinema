@@ -12,6 +12,9 @@ namespace CRUDCore.DAL.Entities
         [EmailAddress(ErrorMessage = "Invalid email address")]
         public string Email { get; set; }
 
+        [Required(ErrorMessage = "Поле є обов'язковим")]
+        public string Name { get; set; }
+
         [Required(ErrorMessage = "The field is requered")]
         public string Password { get; set; }
     }

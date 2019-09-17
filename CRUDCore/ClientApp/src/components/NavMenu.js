@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
+// import PropTypes from 'prop-types';
+// import { logout } from "../action/authAction";
 import './Nav.css'
 class NavMenu extends Component {
     state = {}
@@ -16,12 +18,6 @@ class NavMenu extends Component {
                         </button>
                         <div className="d-sm-inline-flex flex-sm-row-reverse collapse navbar-collapse">
                             <ul className="navbar-nav flex-grow">
-                                {/* <li className="nav-item">
-                                    <Link className="text-light nav-link" to="/">Home</Link>
-                                </li> */} 
-                                {/* <li className="nav-item">
-                                    <Link className="text-light nav-link" to="/Application">Player</Link>
-                                </li> */}
                                 <li className="nav-item">
                                     {
                                         isAuthenticated ?
@@ -33,7 +29,7 @@ class NavMenu extends Component {
                                 <li className="nav-item">
                                 {
                                     isAuthenticated ?
-                                        <Link className="text-light nav-link" to="/logOut">LogOut</Link>:
+                                        <Link className="text-light nav-link" to="/">LogOut</Link>:
                                     
                                         <Link className="text-light nav-link" to="/login">Login</Link>
                                 }

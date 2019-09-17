@@ -8,6 +8,7 @@ import "./login.css";
 class LoginPage extends Component {
     state = {
         name: '',
+        email:'',
         password: '',
         errors: {
             password: "Вкажи пароль"
@@ -40,13 +41,14 @@ class LoginPage extends Component {
         e.preventDefault();
         let errors = {};
         if (this.state.name === '') errors.name = "Поле є обов'язковим!"
+        if (this.state.email === '') errors.email = "Поле є обов'язковим!"
         if (this.state.password === '') errors.password = "Поле є обов'язковим!"
 
         const isValid = Object.keys(errors).length === 0
         if (isValid) {
-            const { password,name } = this.state;
+            const { password,name,email } = this.state;
             this.setState({ isLoading: true });
-            this.props.login({Name:name, Password: password })
+            this.props.login({Name:name, Password: password,Email:email })
                 .then(
                     () => this.setState({ done: true }),
                     (err) => this.setState({ errors: err.response.data, isLoading: false })
@@ -78,6 +80,18 @@ class LoginPage extends Component {
                     value={this.state.name}
                     onChange={this.handleChange} />
                 {!!errors.name ? <span className="help-block">{errors.name}</span> : ''}
+            </div>
+
+
+            <div id="row2" className={classnames('form-group', { 'has-error': !!errors.email })}>
+                <input type="text"
+                    className="form-control"
+                    id="email"
+                    name="email"
+                    placeholder="Email"
+                    value={this.state.email}
+                    onChange={this.handleChange} />
+                {!!errors.email ? <span className="help-block">{errors.email}</span> : ''}
             </div>
 
 
