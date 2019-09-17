@@ -158,7 +158,7 @@ class Application extends Component {
                   {/*class="embed-responsive embed-responsive-4by3"  */}
                   <div className="left">
                     <div className="embed-responsive embed-responsive-4by3">
-                      <iframe className="embed-responsive-item" src="//www.youtube.com/embed/WGrRbrRB51c"></iframe>
+                      <iframe title="asd" className="embed-responsive-item" src="//www.youtube.com/embed/WGrRbrRB51c"></iframe>
                     </div>
                   </div>
                   <br /><br /><br /><br />
