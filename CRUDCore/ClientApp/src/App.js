@@ -7,6 +7,8 @@ import registration from './components/Registration/registration';
 import Application from './components/demo/Application';
 import { Helmet } from 'react-helmet';
 import film from './components/demo/film';
+import film2 from './components/demo/film2';
+import userprofile from './components/userprofile';
 function App() {
   return (
 
@@ -20,7 +22,8 @@ function App() {
         <Route exact path='/login' component={LoginPage} />
         <Route exact path='/registration' component={registration} />
         <Route exact path='/film' component={film} />
-
+        <Route exact path='/film2' component={film2} />
+        <Route exact path='/userprofile' component={userprofile} />
       </Switch>
     </Layout>
 

@@ -51,6 +51,13 @@
   height: 300px;
   
 }
+.foto2{
+  background: url(../image/kod.jpg) no-repeat;
+  background-size:contain;
+  width: 400px;
+  height: 300px;
+  
+}
 .text1{
   color: white;
   margin-left: 350px;
@@ -63,8 +70,23 @@
   float: right;
   margin-top: -300px;
 }
+.text3{
+  color: white;
+  margin-left: 350px;
+  float: right;
+  margin-top: -300px;
+}
+
+
 .border{
-  border: 4px double black;
+  border: 100px double ;
   background: rgba(61, 61, 61, 0.479); 
   padding: 10px; 
+}
+.footer{
+  border: 2px double ;
+  background: rgba(2, 2, 2, 0.26); 
+  padding: 10px; 
+ 
+  color: white;
 }

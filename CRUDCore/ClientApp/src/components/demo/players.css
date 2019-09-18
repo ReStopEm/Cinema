@@ -11,6 +11,12 @@
   width: 400px;
   height: 300px;
 }
+.form_image2{
+  background: url(../../image/kod.jpg) no-repeat;
+  background-size:contain;
+  width: 400px;
+  height: 300px;
+}
 .left{
     margin-left: 750px;
     width: 400px;

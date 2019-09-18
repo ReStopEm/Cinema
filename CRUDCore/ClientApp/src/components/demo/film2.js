@@ -136,30 +136,28 @@ class Application extends Component {
                             <tr>
                                 <td>
                                     <form>
-                                        <p className="filmtext" >Макс Стіл</p>
-                                        <div className="form_image" >
+                                        <p className="filmtext" >Исходний код</p>
+                                        <div className="form_image2" >
                                             <p className="text" >
-                                                Название:&nbsp;Max&nbsp;Steel
-                                                <br/><br/>
-                                                Год&nbsp;выхода:&nbsp;2016
-                                                <br/><br/>
-                                                Актеры:&nbsp;Бен&nbsp;Уинчелл,Джош&nbsp;Бренер,Мария&nbsp;Белло,
-                                                Энди&nbsp;Гарсиа,Ана&nbsp;Вийафанья
-                                                Режиссер:&nbsp;Стюарт&nbsp;Хендлер
-                                                <br/><br/>
-                                                Страна:&nbsp;Великобритания,&nbsp;США
-                                                <br/><br/>
-                                                Жанр:&nbsp;Фильмы,&nbsp;Боевики,&nbsp;Приключения,
-                                                Семейные,&nbsp;Фантастика,&nbsp;Фэнтези
-                                                <br/><br/>
+                                                Год&nbsp;выпуска:&nbsp;2011
+                                                Страна:&nbsp;США,&nbsp;Канада
+                                                Жанр:&nbsp;фантастика,&nbsp;боевик,&nbsp;триллер,&nbsp;драма
+                                                Качество:&nbsp;Full&nbsp;HD&nbsp;1080
+                                                Перевод:&nbsp;Дублированный
+                                                Продолжительность:&nbsp;01:33
+                                                Режиссер:&nbsp;Дункан&nbsp;Джонс
+                                                В&nbsp;ролях:&nbsp;Джейк&nbsp;Джилленхол,Мишель&nbsp;Монахэн
+                                                Вера&nbsp;Фармига,&nbsp;Джеффри&nbsp;Райт,Майкл&nbsp;Арден
+                                                Кэс&nbsp;Анвар,Расселл&nbsp;Питерс,Брент&nbsp;Скэгфорд
+                                                Крэйг&nbsp;Томас,Гордон&nbsp;Мастен
                                       </p>
                                         </div>
-                                        <p className="text_g">Сюжет данной картины закручен вокруг необычного подростка по имени Макс МакГрат. Главный герой "Макса Стила" однажды обнаруживает за собой уникальную способность генерировать мощную энергию, которая является неповторимой в своем роде во всей Вселенной.
-Подросток вынужден встретиться с единственным существом, способным совладать с такой мощной энергией — таинственным техноорганическим инопланетянином по имени Стил. Эта встреча кардинальным образом изменит жизнь не только нашего мальчика-подростка, но и возможно всего человечества.</p>
-                                        {/*class="embed-responsive embed-responsive-4by3"  */}
+                                        <p className="text_g">Капитан Колтер Стивенс оказывается в поезде, в теле другого человека – парня по имени Шон Фентресс. Однако прежде чем он понимает что происходит, взрыв бомбы, заложенной в поезде, уничтожает его.
+Стивен приходит в себя внутри какой-то капсулы, где с помощью компьютера к нему обращается женщина в военной форме Коллин Гудвин. Она сообщает, что Колтер находится внутри программы «Исходный код», с помощью которой его вселяют в тело человека в последние восемь минут его жизни.
+Стивенса раз за разом перемещают в тело другого человека, снова и снова он вынужден переживать чужую смерть, пока не найдет кто и где установил бомбу.</p>                                        {/*class="embed-responsive embed-responsive-4by3"  */}
                                         <div className="left">
                                             <div className="embed-responsive embed-responsive-4by3">
-                                                <iframe title="asd" className="embed-responsive-item" src="//www.youtube.com/embed/kmX3c6hfDbI"></iframe>
+                                                <iframe title="asd" className="embed-responsive-item" src="//www.youtube.com/embed/uoXK_Ikezng"></iframe>
                                             </div>
                                         </div>
                                         <br /><br /><br /><br />
@@ -170,10 +168,10 @@ class Application extends Component {
                         </tbody>
                     </table>
                     <div className='player-wrapper'>
-                         <div className="module-button-hide">
-              <input id="button" type="checkbox" />
-              <label className="center"  onClick={() => this.setState({ url: 'https://www.youtube.com/watch?v=TqrgAM_8FvA' })} htmlFor="button">► Начать просмотр</label>
-            </div> 
+                        <div className="module-button-hide">
+                            <input id="button" type="checkbox" />
+                            <label className="center" onClick={() => this.setState({ url: 'https://www.youtube.com/watch?v=V6gufyeSZyU' })} htmlFor="button">► Начать просмотр</label>
+                        </div>
                         <ReactPlayer
                             ref={this.ref}
                             className='react-player'
