@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-// import PropTypes from 'prop-types';
-// import { logout } from "../action/authAction";
+import PropTypes from 'prop-types';
+import { logout } from "../action/authAction";
 import './Nav.css'
 class NavMenu extends Component {
     state = {}
@@ -29,7 +29,7 @@ class NavMenu extends Component {
                                 <li className="nav-item">
                                 {
                                     isAuthenticated ?
-                                        <Link className="text-light nav-link" to="/">LogOut</Link>:
+                                        <Link className="text-light nav-link" to="/" onClick={(e)=> {e.preventDefault(); this.props.logout();}}>LogOut</Link>:
                                     
                                         <Link className="text-light nav-link" to="/login">Login</Link>
                                 }
@@ -43,6 +43,10 @@ class NavMenu extends Component {
     }
 }
 
+NavMenu.propTypes = {
+    logout: PropTypes.func.isRequired
+}
+
 
 const mapStateToProps = (state) => {
     return {
@@ -50,4 +54,4 @@ const mapStateToProps = (state) => {
     };
   }
 
-export default connect(mapStateToProps)(NavMenu);
+export default connect(mapStateToProps, { logout })(NavMenu);

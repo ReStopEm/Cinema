@@ -17,7 +17,6 @@ class Home extends Component {
         return (
             <div >
                 <div className="border">
-                    <Link className="text-light nav-link" to="/Application" >Телохранитель</Link>
                     <Link className="foto" to="/Application" ></Link>
                     <p className="text1" >Название:&nbsp;Телохранитель<br />
                         Оригинальное&nbsp;название:&nbsp;London&nbsp;Boulevard<br />
@@ -34,7 +33,6 @@ class Home extends Component {
 
                     <br />
                     <hr />
-                    <Link className="text-light nav-link" to="/film" >Макс Стіл</Link>
                     <Link className="foto1" to="/film" ></Link>
                     <p className="text2" >
                         Название:&nbsp;Max&nbsp;Steel
@@ -55,7 +53,6 @@ class Home extends Component {
                 </p>
                     <br />
                     <hr />
-                    <Link className="text-light nav-link" to="/film2" >Исходний код</Link>
                     <Link className="foto2" to="/film" ></Link>
                     <p className="text3">
                         Год&nbsp;выпуска:&nbsp;2011
