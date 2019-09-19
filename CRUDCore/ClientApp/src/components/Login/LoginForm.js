@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import { Redirect } from "react-router";
 import { login } from "../../action/authAction";
 import "./login.css";
+import Loader from '../../loader/modal'
 class LoginPage extends Component {
     state = {
         name: '',
@@ -116,6 +117,12 @@ class LoginPage extends Component {
             </div>
         </form>
         );
+        if(isLoading)
+        {
+            return(
+                <Loader loading={isLoading}/>
+            );
+        }
         return (
             this.state.done ?
                 <Redirect to="/" /> :
