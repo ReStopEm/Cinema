@@ -8,7 +8,8 @@ namespace CRUDCore.ViewModels
 {
     public class RegisterViewModel
     {
-        [Required(ErrorMessage = "Поле є обов'язковим")]
+        [Required(ErrorMessage = "The field is requered")]
+        [EmailAddress(ErrorMessage = "Invalid email address")]
         public string Email { get; set; }
         [Required(ErrorMessage = "Поле є обов'язковим")]
         public string Name { get; set; }
