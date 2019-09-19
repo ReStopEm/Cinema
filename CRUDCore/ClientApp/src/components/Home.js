@@ -18,7 +18,6 @@ class Home extends Component {
             <div >
                 <div className="border" >
                     <div className="border2">
-                    <Link className="text-light nav-link" to="/Application" >Телохранитель</Link>
                     <Link className="foto" to="/Application" ></Link>
                     <p className="text1" >Название:&nbsp;Телохранитель<br />
                         Оригинальное&nbsp;название:&nbsp;London&nbsp;Boulevard<br />
@@ -34,7 +33,6 @@ class Home extends Component {
                         Эдди&nbsp;Марсан,Санджив&nbsp;Бхаскар,&nbsp;Стивен&nbsp;Грэм,<br />Офелия&nbsp;Ловибонд<br /><br />Гангстер по имени Митчелл знакомится с очаровательной киноактрисой Шарлоттой, которая является очень ранимой натурой, поэтому вынуждена всегда скрываться от папараци и прочих преследователей. Митч отчаянно хочет порвать со своим прошлым и находит утешение в этой милой девушке, для которой готов сделать все. Однако, криминальный мир не спешит расставаться с таким профессионалом, как Митч.</p>
                         </div>
                     <div className="border2" >
-                    <Link className="text-light nav-link" to="/film" >Макс Стіл</Link>
                     <Link className="foto1" to="/film" ></Link>
                     <p className="text2" >
                         Название:&nbsp;Max&nbsp;Steel
@@ -55,7 +53,6 @@ class Home extends Component {
                 </p>
                 </div>
                     <div className="border2">
-                    <Link className="text-light nav-link" to="/film2" >Исходний код</Link>
                     <Link className="foto2" to="/film" ></Link>
                     <p className="text3">
                         Год&nbsp;выпуска:&nbsp;2011
