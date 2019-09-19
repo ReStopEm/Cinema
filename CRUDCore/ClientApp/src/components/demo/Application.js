@@ -213,13 +213,13 @@ class Application extends Component {
 
                 </td>
               </tr>
-               <tr>
+                        {/* <tr>
                 <th>Custom URL</th>
                 <td>
                   <input ref={input => { this.urlInput = input }} type='text' placeholder='Enter URL' />
                   <button onClick={() => this.setState({ url: 'https://www.youtube.com/watch?v=TqrgAM_8FvA' })}>Load</button>
                 </td>
-              </tr>  
+              </tr> */} 
             </tbody> 
           </table>
 

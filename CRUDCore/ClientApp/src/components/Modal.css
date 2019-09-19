@@ -62,26 +62,26 @@
   color: white;
   margin-left: 350px;
   float: right;
-  margin-top: -340px;
+  margin-top: -320px;
 }
-.text2{
-  color: white;
-  margin-left: 350px;
-  float: right;
-  margin-top: -340px;
+.text2 {
+    color: white;
+    margin-left: 350px;
+    float: right;
+    margin-top: -320px;
 }
-.text3{
-  color: white;
-  margin-left: 350px;
-  float: right;
-  margin-top: -340px;
+.text3 {
+    color: white;
+    margin-left: 350px;
+    float: right;
+    margin-top: -320px;
 }
 
 
 .border{
   border: 100px double ;
   background: rgba(61, 61, 61, 0.479); 
-  padding: 10px; 
+  padding: 1px; 
 }
 .border2{
   border: 100px double ;
