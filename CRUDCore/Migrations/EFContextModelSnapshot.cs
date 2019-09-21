@@ -19,6 +19,24 @@ namespace CRUDCore.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("Backend.DAL.Entities.DbAnimal", b =>
+            {
+                b.Property<int>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                b.Property<string>("Image")
+                    .HasMaxLength(1000);
+
+                b.Property<string>("Name")
+                    .IsRequired()
+                    .HasMaxLength(255);
+
+                b.HasKey("Id");
+
+                b.ToTable("AspNetAnimal");
+            });
+
             modelBuilder.Entity("CRUDCore.DAL.Entities.DbRole", b =>
                 {
                     b.Property<long>("Id")

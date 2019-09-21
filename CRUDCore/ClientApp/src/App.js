@@ -9,6 +9,9 @@ import { Helmet } from 'react-helmet';
 import film from './components/demo/film';
 import film2 from './components/demo/film2';
 import userprofile from './components/userprofile';
+import AnimalWidget from './components/animal';
+import AnimalCreate from './components/animal/add';
+import AnimalAddCropperWidget from './components/animal/addcropper/index';
 function App() {
   return (
 
@@ -24,6 +27,9 @@ function App() {
         <Route exact path='/film' component={film} />
         <Route exact path='/film2' component={film2} />
         <Route exact path='/userprofile' component={userprofile} />
+        <Route exact path='/animal' component={AnimalWidget} />
+          <Route exact path='/animal/add' component={AnimalCreate} />
+          <Route exact path='/animal/add/cropper' component={AnimalAddCropperWidget} />
       </Switch>
     </Layout>
 

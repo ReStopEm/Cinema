@@ -17,6 +17,7 @@ namespace CRUDCore.DAL.Entities
         {
 
         }
+        public DbSet<DbAnimal> Animals { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
