@@ -10,34 +10,31 @@ class NavMenu extends Component {
         const { isAuthenticated, user } = this.props.auth;
         return (
             <header>
-                <nav className="navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow mb-3 navbar navbar-light">
-                    <div className="container">
-                        <Link className="text-light nav-link" to="/">CiNeMa</Link>
-                        <button type="button" className="mr-2 navbar-toggler">
-                            <span className="navbar-toggler-icon"></span>
-                        </button>
-                        <div className="d-sm-inline-flex flex-sm-row-reverse collapse navbar-collapse">
-                            <ul className="navbar-nav flex-grow">
-                                <li className="nav-item">
-                                    {
-                                        isAuthenticated ?
-                                            <Link className="text-light nav-link" to="/userprofile">{user.name}</Link> :
-                                    
-                                            <Link className="text-light nav-link" to="/registration">Register</Link>
-                                    }
-                                </li>
-                                <li className="nav-item">
-                                {
-                                    isAuthenticated ?
-                                        <Link className="text-light nav-link" to="/" onClick={(e)=> {e.preventDefault(); this.props.logout();}}>LogOut</Link>:
-                                    
-                                        <Link className="text-light nav-link" to="/login">Login</Link>
-                                }
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
+                <div class="hamburger-menu">
+                    <input id="menu__toggle" type="checkbox" />
+                    <label class="menu__btn" for="menu__toggle">
+                        <span></span>
+                    </label>
+                    <ul class="menu__box">
+                    <Link class="menu__item" href="#">CiNeMa</Link>
+                        <li className="nav-item">
+                            {
+                                isAuthenticated ?
+                                    <Link className="menu__item"  to="/userprofile">{user.name}</Link> :
+
+                                    <Link  className="menu__item"  to="/registration">Register</Link>
+                            }
+                        </li>
+                        <li className="nav-item">
+                            {
+                                isAuthenticated ?
+                                    <Link  className="menu__item"  to="/" onClick={(e) => { e.preventDefault(); this.props.logout(); }}>LogOut</Link> :
+
+                                    <Link  className="menu__item"  to="/login">Login</Link>
+                            }
+                        </li>
+                    </ul>
+                </div>
             </header>
         );
     }
@@ -50,8 +47,8 @@ NavMenu.propTypes = {
 
 const mapStateToProps = (state) => {
     return {
-      auth: state.auth
+        auth: state.auth
     };
-  }
+}
 
 export default connect(mapStateToProps, { logout })(NavMenu);
