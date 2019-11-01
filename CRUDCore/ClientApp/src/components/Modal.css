@@ -58,25 +58,13 @@
   height: 300px;
   
 }
-.text1{
+.text{
   color: white;
   margin-left: 350px;
   float: right;
-  margin-top: -320px;
+  margin-top: -300px;
+  font-size: 14px;
 }
-.text2 {
-    color: white;
-    margin-left: 350px;
-    float: right;
-    margin-top: -320px;
-}
-.text3 {
-    color: white;
-    margin-left: 350px;
-    float: right;
-    margin-top: -320px;
-}
-
 
 .border{
   border: 100px double ;

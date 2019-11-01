@@ -19,7 +19,7 @@ class Home extends Component {
                 <div className="border" >
                     <div className="border2">
                     <Link className="foto" to="/Application" ></Link>
-                    <p className="text1" >Название:&nbsp;Телохранитель<br />
+                    <p className="text" >Название:&nbsp;Телохранитель<br />
                         Оригинальное&nbsp;название:&nbsp;London&nbsp;Boulevard<br />
                         Год:&nbsp;2010<br />
                         Страна:&nbsp;США,&nbsp;Великобритания<br />
@@ -34,7 +34,7 @@ class Home extends Component {
                         </div>
                     <div className="border2" >
                     <Link className="foto1" to="/film" ></Link>
-                    <p className="text2" >
+                    <p className="text" >
                         Название:&nbsp;Max&nbsp;Steel
                         <br /><br />
                         Год&nbsp;выхода:&nbsp;2016
@@ -54,7 +54,7 @@ class Home extends Component {
                 </div>
                     <div className="border2">
                     <Link className="foto2" to="/film" ></Link>
-                    <p className="text3">
+                    <p className="text">
                         Год&nbsp;выпуска:&nbsp;2011
                         <br />
                         Страна:&nbsp;США,&nbsp;Канада

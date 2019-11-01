@@ -10,13 +10,13 @@ class NavMenu extends Component {
         const { isAuthenticated, user } = this.props.auth;
         return (
             <header>
-                <div class="hamburger-menu">
+                <div className="hamburger-menu">
                     <input id="menu__toggle" type="checkbox" />
-                    <label class="menu__btn" for="menu__toggle">
+                    <label className="menu__btn" htmlFor="menu__toggle">
                         <span></span>
                     </label>
-                    <ul class="menu__box">
-                    <Link class="menu__item" href="#">CiNeMa</Link>
+                    <ul className="menu__box">
+                    <Link className="menu__item" to="/">CiNeMa</Link>
                         <li className="nav-item">
                             {
                                 isAuthenticated ?

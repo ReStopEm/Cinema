@@ -45,21 +45,27 @@
     padding: 80px 0;
     list-style: none;
     text-align: center;
-    background-color: rgb(0, 33, 65);
-    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    background: url(./Registration/Images/бетмен.jpg) ;
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+    box-shadow: 1px 0px 6px rgb(0, 0, 0);
   }
   /* элементы меню */
   .menu__item {
     display: block;
     padding: 12px 24px;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: 600;
     text-decoration: none;
   }
   .menu__item:hover {
-    background-color: rgb(0, 12, 17);
+    background-color: rgba(0, 82, 100, 0); 
+    text-decoration: none;
+    color: #ffffff;
   }
   #menu__toggle:checked ~ .menu__btn > span {
     transform: rotate(45deg);

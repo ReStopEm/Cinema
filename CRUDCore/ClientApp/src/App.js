@@ -9,6 +9,10 @@ import { Helmet } from 'react-helmet';
 import film from './components/demo/film';
 import film2 from './components/demo/film2';
 import userprofile from './components/userprofile';
+// import { Admin, Resource, ListGuesser } from "react-admin";
+// import jsonServerProvider from "ra-data-json-server";
+// const dataProvider =
+//   jsonServerProvider("https://jsonplaceholder.typicode.com");
 function App() {
   return (
 
@@ -17,6 +21,9 @@ function App() {
         <style>{'body {background: -webkit-linear-gradient(right, #000000,#1d3655); }'}</style>
       </Helmet>
       <Switch>
+      {/* <Admin dataProvider={dataProvider}>
+        <Resource name="users" list={ListGuesser} />
+      </Admin> */}
         <Route exact path='/' component={Home} />
         <Route exact path='/Application' component={Application} />
         <Route exact path='/login' component={LoginPage} />

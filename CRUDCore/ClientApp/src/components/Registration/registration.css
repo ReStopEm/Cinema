@@ -5,6 +5,7 @@
     background: url(./Images/container-bg.png) no-repeat;
     background-size:contain;
     height: 700px;
+    z-index: 0;
 }
 
 .btnSubmit
