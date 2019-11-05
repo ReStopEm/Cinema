@@ -1,3 +1,10 @@
+/* ::-webkit-scrollbar { 
+  width: 0px;  
+  background: transparent; 
+} */
+
+
+
 .custommodal {
   background-color: rgba(163, 137, 106, 0.849);
   display: none;

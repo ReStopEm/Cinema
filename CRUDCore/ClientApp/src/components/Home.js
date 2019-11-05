@@ -15,7 +15,7 @@ class Home extends Component {
     }
     render() {
         return (
-            <div >
+            <div  >
                 <div >
                     <div className="divf1" >
                         <div className="border2">
