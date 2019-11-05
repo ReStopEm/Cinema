@@ -18,7 +18,7 @@ function App() {
 
     <Layout>
       <Helmet>
-        <style>{'body {background: -webkit-linear-gradient(right, #000000,#1d3655); }'}</style>
+        <style>{'body {background: -webkit-linear-gradient(bottom, #000000,#1d3655);background-size: 100% 100%;background-attachment: fixed; }'}</style>
       </Helmet>
       <Switch>
       {/* <Admin dataProvider={dataProvider}>

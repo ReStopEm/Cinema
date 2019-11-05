@@ -35,6 +35,9 @@ class NavMenu extends Component {
                         </li>
                     </ul>
                 </div>
+                {/* <div >
+                    <p><img src="Registration/Images/home.png" alt/></p>
+                </div> */}
             </header>
         );
     }
