@@ -70,6 +70,8 @@
   border: 100px double ;
   background: rgba(61, 61, 61, 0.479); 
   padding: 1px; 
+
+
 }
 .border2{
   border: 100px double ;
@@ -84,3 +86,19 @@
   color: white;
 }
 
+.divf1 {
+  float: left; 
+ 
+ 
+ }
+ .divf2 {
+  float: left;
+  margin-left: 1150px;
+  margin-top: -520px;
+  
+ } 
+ .divf3 {
+  float: left; 
+  margin-left: 2050px;
+  margin-top: -520px;
+ }
