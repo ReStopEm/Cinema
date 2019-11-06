@@ -15,26 +15,27 @@ class Home extends Component {
     }
     render() {
         return (
-            <div  >
-                    <div className="border2">
-                        <Link className="foto" to="/Application" ></Link>
-                        <p className="text" >Название:&nbsp;Телохранитель<br />
-                            Оригинальное&nbsp;название:&nbsp;London&nbsp;Boulevard<br />
-                            Год:&nbsp;2010<br />
-                            Страна:&nbsp;США,&nbsp;Великобритания<br />
-                            Слоган:&nbsp;«Not&nbsp;every&nbsp;criminal&nbsp;wants&nbsp;to&nbsp;be&nbsp;one.»<br />
-                            Режиссер:&nbsp;Уильям&nbsp;Монахэн<br />
-                            Жанр:&nbsp;Драмы,Криминальные<br />
-                            Время:&nbsp;01:40:23<br />
-                            Цикл:&nbsp;Фильмы&nbsp;про&nbsp;преступников<br />
-                            Доп.язык озвучки:&nbsp;Английский<br />
-                            В&nbsp;главных&nbsp;ролях:&nbsp;Колин&nbsp;Фаррелл,Кира&nbsp;Найтли,Рэй&nbsp;<br />Уинстон,Дэвид&nbsp;Тьюлис,Анна&nbsp;Фрил,Бен&nbsp;Чаплин,<br />
-                            Эдди Марсан,Санджив Бхаскар, Стивен Грэм,<br />Офелия Ловибонд<br /><br />
-                            Гангстер по имени Митчелл знакомится с очаровательной<br /> киноактрисой Шарлоттой, которая является...
-                       </p>
-                    </div>
-                   <div className="border2" >
-                        <Link className="foto1" to="/film" ></Link>
+            <div class="horizontal-scroll-wrapper squares">
+            <div>       
+                 <Link className="foto" to="/Application" ></Link> 
+                    <p className="text" >Название:&nbsp;Телохранитель<br />
+                        Оригинальное&nbsp;название:&nbsp;London&nbsp;Boulevard<br />
+                        Год:&nbsp;2010<br />
+                        Страна:&nbsp;США,&nbsp;Великобритания<br />
+                        Слоган:&nbsp;«Not&nbsp;every&nbsp;criminal&nbsp;wants&nbsp;to&nbsp;be&nbsp;one.»<br />
+                        Режиссер:&nbsp;Уильям&nbsp;Монахэн<br />
+                        Жанр:&nbsp;Драмы,Криминальные<br />
+                        Время:&nbsp;01:40:23<br />
+                        Цикл:&nbsp;Фильмы&nbsp;про&nbsp;преступников<br />
+                        Доп.язык озвучки:&nbsp;Английский<br />
+                        В&nbsp;главных&nbsp;ролях:&nbsp;Колин&nbsp;Фаррелл,Кира&nbsp;Найтли,Рэй&nbsp;<br />Уинстон,Дэвид&nbsp;Тьюлис,Анна&nbsp;Фрил,Бен&nbsp;Чаплин,<br />
+                        Эдди Марсан,Санджив Бхаскар, Стивен Грэм,<br />Офелия Ловибонд<br /><br />
+                        Гангстер по имени Митчелл знакомится с очаровательной<br /> киноактрисой Шарлоттой, которая является...
+                   </p>  
+                   </div>
+
+            <div>
+            <Link className="foto1" to="/film" ></Link>
                         <p className="text" >
                             Название:&nbsp;Max&nbsp;Steel
                         <br /><br />
@@ -51,9 +52,9 @@ class Home extends Component {
                          <br /><br />
                             Сюжет данной картины закручен вокруг необычного подростка по имени Макс МакГрат...
                             </p>
-                    </div>
-                    <div className="border2">
-                        <Link className="foto2" to="/film" ></Link>
+            </div>
+            <div>
+            <Link className="foto2" to="/film" ></Link>
                         <p className="text">
                             Год&nbsp;выпуска:&nbsp;2011
                         <br />
@@ -76,11 +77,13 @@ class Home extends Component {
                         <br /><br />
                             Капитан Колтер Стивенс оказывается в поезде, в теле другого человека...
              </p>
-                    </div>
-               
-                
-
             </div>
+            <div>item 4</div>
+            <div>item 5</div>
+            <div>item 6</div>
+            <div>item 7</div>
+            <div>item 8</div>   
+        </div>
         );
     }
 }
