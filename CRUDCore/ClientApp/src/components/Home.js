@@ -16,8 +16,6 @@ class Home extends Component {
     render() {
         return (
             <div  >
-                {/* class="horizontal-scroll-wrapper squares" */}
-                <div >
                     <div className="border2">
                         <Link className="foto" to="/Application" ></Link>
                         <p className="text" >Название:&nbsp;Телохранитель<br />
@@ -35,7 +33,7 @@ class Home extends Component {
                             Гангстер по имени Митчелл знакомится с очаровательной<br /> киноактрисой Шарлоттой, которая является...
                        </p>
                     </div>
-                    {/* <div className="border2" >
+                   <div className="border2" >
                         <Link className="foto1" to="/film" ></Link>
                         <p className="text" >
                             Название:&nbsp;Max&nbsp;Steel
@@ -78,8 +76,8 @@ class Home extends Component {
                         <br /><br />
                             Капитан Колтер Стивенс оказывается в поезде, в теле другого человека...
              </p>
-                    </div> */}
-                </div>
+                    </div>
+               
                 
 
             </div>
