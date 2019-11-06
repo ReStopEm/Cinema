@@ -13,6 +13,7 @@ import userprofile from './components/userprofile';
 // import jsonServerProvider from "ra-data-json-server";
 // const dataProvider =
 //   jsonServerProvider("https://jsonplaceholder.typicode.com");
+import test from './components/test';
 function App() {
   return (
 
@@ -31,6 +32,7 @@ function App() {
         <Route exact path='/film' component={film} />
         <Route exact path='/film2' component={film2} />
         <Route exact path='/userprofile' component={userprofile} />
+        <Route exact path='/test' component={test} />
       </Switch>
     </Layout>
 
