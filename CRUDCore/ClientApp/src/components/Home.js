@@ -15,7 +15,7 @@ class Home extends Component {
     }
     render() {
         return (
-            <div class="horizontal-scroll-wrapper squares">
+            <div className="horizontal-scroll-wrapper squares">
             <div>       
                  <Link className="foto" to="/Application" ></Link> 
                     <p className="text" >Название:&nbsp;Телохранитель<br />
@@ -83,6 +83,7 @@ class Home extends Component {
             <div>item 6</div>
             <div>item 7</div>
             <div>item 8</div>   
+            <p><a href="#top">Наверх</a></p>
         </div>
         );
     }
