@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -15,6 +15,17 @@ namespace CRUDCore
         public static void Main(string[] args)
         {
             CreateWebHostBuilder(args).Build().Run();
+
+            using (CRUDCoreContext db = new CRUDCoreContext())
+            {
+              
+                var users = db.AspNetUsers.ToList(); 
+                Console.WriteLine("Список объектов:");
+                foreach (AspNetUsers u in users)
+                {
+                    Console.WriteLine($"{u.Id}.{u.UserName} - {u.Email}");
+                }
+            }
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
