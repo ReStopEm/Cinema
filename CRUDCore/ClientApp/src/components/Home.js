@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Modal.css';
 import { Link } from "react-router-dom";
+
 class Home extends Component {
     state = {
         isShowModal: false,
@@ -14,6 +15,7 @@ class Home extends Component {
         history.push('/user/add');
     }
     render() {
+        //console.log($"{u.Id}.{u.UserName} - {u.Email}");
         return (
             <div className="horizontal-scroll-wrapper squares">
             <div>       

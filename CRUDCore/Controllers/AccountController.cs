@@ -43,7 +43,6 @@ namespace CRUDCore.Controllers
                 UserName = credentials.Name//,
                 //PasswordHash = credentials.Password
             };
-
             var result = await _userManager.CreateAsync(user, credentials.Password);
             if (!result.Succeeded)
             {
