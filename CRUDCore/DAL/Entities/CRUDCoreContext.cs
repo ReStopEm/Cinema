@@ -1,22 +1,20 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using System;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace CRUDCore.DAL.Entities
+namespace CRUDCore
 {
-    public class EFContext : IdentityDbContext<DbUser, DbRole, long, IdentityUserClaim<long>,
-        DbUserRole, IdentityUserLogin<long>,
-        IdentityRoleClaim<long>, IdentityUserToken<long>>
+    public partial class CRUDCoreContext : DbContext
     {
-        public EFContext(DbContextOptions<EFContext> options)
+        public CRUDCoreContext()
+        {
+        }
+
+        public CRUDCoreContext(DbContextOptions<CRUDCoreContext> options)
             : base(options)
         {
-
         }
+
         public virtual DbSet<AspNetRoleClaims> AspNetRoleClaims { get; set; }
         public virtual DbSet<AspNetRoles> AspNetRoles { get; set; }
         public virtual DbSet<AspNetUserClaims> AspNetUserClaims { get; set; }
@@ -26,6 +24,7 @@ namespace CRUDCore.DAL.Entities
         public virtual DbSet<AspNetUserTokens> AspNetUserTokens { get; set; }
         public virtual DbSet<Description> Description { get; set; }
         public virtual DbSet<Movies> Movies { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
@@ -34,25 +33,19 @@ namespace CRUDCore.DAL.Entities
                 optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=CRUDCore;Trusted_Connection=True;");
             }
         }
-        protected override void OnModelCreating(ModelBuilder builder)
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(builder);
-
-            builder.Entity<DbUserRole>(userRole => 
+            modelBuilder.Entity<AspNetRoleClaims>(entity =>
             {
-                userRole.HasKey(ur => new { ur.UserId, ur.RoleId });
+                entity.HasIndex(e => e.RoleId);
 
-                userRole.HasOne(ur => ur.Role)
-                    .WithMany(r => r.UserRoles)
-                    .HasForeignKey(ur => ur.RoleId)
-                    .IsRequired();
-
-                userRole.HasOne(ur => ur.User)
-                    .WithMany(r => r.UserRoles)
-                    .HasForeignKey(ur => ur.UserId)
-                    .IsRequired();
+                entity.HasOne(d => d.Role)
+                    .WithMany(p => p.AspNetRoleClaims)
+                    .HasForeignKey(d => d.RoleId);
             });
-            builder.Entity<AspNetRoles>(entity =>
+
+            modelBuilder.Entity<AspNetRoles>(entity =>
             {
                 entity.HasIndex(e => e.NormalizedName)
                     .HasName("RoleNameIndex")
@@ -64,7 +57,7 @@ namespace CRUDCore.DAL.Entities
                 entity.Property(e => e.NormalizedName).HasMaxLength(256);
             });
 
-            builder.Entity<AspNetUserClaims>(entity =>
+            modelBuilder.Entity<AspNetUserClaims>(entity =>
             {
                 entity.HasIndex(e => e.UserId);
 
@@ -73,7 +66,7 @@ namespace CRUDCore.DAL.Entities
                     .HasForeignKey(d => d.UserId);
             });
 
-            builder.Entity<AspNetUserLogins>(entity =>
+            modelBuilder.Entity<AspNetUserLogins>(entity =>
             {
                 entity.HasKey(e => new { e.LoginProvider, e.ProviderKey });
 
@@ -88,7 +81,7 @@ namespace CRUDCore.DAL.Entities
                     .HasForeignKey(d => d.UserId);
             });
 
-            builder.Entity<AspNetUserRoles>(entity =>
+            modelBuilder.Entity<AspNetUserRoles>(entity =>
             {
                 entity.HasKey(e => new { e.UserId, e.RoleId });
 
@@ -103,7 +96,7 @@ namespace CRUDCore.DAL.Entities
                     .HasForeignKey(d => d.UserId);
             });
 
-            builder.Entity<AspNetUsers>(entity =>
+            modelBuilder.Entity<AspNetUsers>(entity =>
             {
                 entity.HasIndex(e => e.NormalizedEmail)
                     .HasName("EmailIndex");
@@ -122,7 +115,7 @@ namespace CRUDCore.DAL.Entities
                 entity.Property(e => e.UserName).HasMaxLength(256);
             });
 
-            builder.Entity<AspNetUserTokens>(entity =>
+            modelBuilder.Entity<AspNetUserTokens>(entity =>
             {
                 entity.HasKey(e => new { e.UserId, e.LoginProvider, e.Name });
 
@@ -135,7 +128,7 @@ namespace CRUDCore.DAL.Entities
                     .HasForeignKey(d => d.UserId);
             });
 
-            builder.Entity<Description>(entity =>
+            modelBuilder.Entity<Description>(entity =>
             {
                 entity.Property(e => e.Id)
                     .HasColumnName("id")
@@ -162,7 +155,7 @@ namespace CRUDCore.DAL.Entities
                     .HasMaxLength(50);
             });
 
-            builder.Entity<Movies>(entity =>
+            modelBuilder.Entity<Movies>(entity =>
             {
                 entity.Property(e => e.Id).ValueGeneratedNever();
 
