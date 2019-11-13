@@ -1,8 +1,8 @@
 //плеїр ютуба
 import React, { Component } from 'react'
 
-import { callPlayer, getSDK, parseStartTime, parseEndTime } from '../../utils'
-import createSinglePlayer from '../../singlePlayer'
+import { callPlayer, getSDK, parseStartTime, parseEndTime } from '../../Player/utils'
+import createSinglePlayer from '../../Player/singlePlayer'
 
 const SDK_URL = 'https://www.youtube.com/iframe_api'
 const SDK_GLOBAL = 'YT'

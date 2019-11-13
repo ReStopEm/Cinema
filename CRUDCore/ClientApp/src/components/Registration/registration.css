@@ -2,7 +2,7 @@
 {
     padding: 5%;
     margin-bottom: 2%;
-    background: url(./Images/container-bg.png) no-repeat;
+    background: url(../../image/container-bg.png) no-repeat;
     background-size:contain;
     height: 700px;
     z-index: 0;

@@ -11,7 +11,7 @@
     margin-top: 300px;
   }
   .s1{
-    background: url(../image/max.jpeg) no-repeat;
+    background: url(../../image/max.jpeg) no-repeat;
     background-size:contain;
     width: 400px;
     height: 300px;
@@ -19,7 +19,7 @@
     margin-top: -300px;
   }
   .s2{
-    background: url(../image/kod.jpg) no-repeat;
+    background: url(../../image/kod.jpg) no-repeat;
     background-size:contain;
     width: 400px;
     height: 300px;
@@ -27,7 +27,7 @@
     margin-top: -300px;
   }
 .cab{
-    background: url(../image/bet.png) no-repeat;
+    background: url(../../image/bet.png) no-repeat;
     width: 500px;
     height: 500px;
 }
