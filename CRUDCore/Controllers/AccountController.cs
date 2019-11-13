@@ -40,8 +40,8 @@ namespace CRUDCore.Controllers
             var user = new DbUser
             {
                 Email = credentials.Email,
-                UserName = credentials.Name//,
-                //PasswordHash = credentials.Password
+                UserName = credentials.Name,
+               
             };
             var result = await _userManager.CreateAsync(user, credentials.Password);
             if (!result.Succeeded)

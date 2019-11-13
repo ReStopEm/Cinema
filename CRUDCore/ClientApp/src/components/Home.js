@@ -16,27 +16,27 @@ class Home extends Component {
     }
     render() {
 
-        let active = 2;
-        let items = [];
-        for (let number = 1; number <= 5; number++) {
-            items.push(
-                <Pagination.Item key={number} active={number === active}>
-                    {number}
-                </Pagination.Item>,
-            );
-        }
+        // let active = 2;
+        // let items = [];
+        // for (let number = 1; number <= 5; number++) {
+        //     items.push(
+        //         <Pagination.Item key={number} active={number === active}>
+        //             {number}
+        //         </Pagination.Item>,
+        //     );
+        // }
 
-        const paginationBasic = (
-            <div>
-                <Pagination>{items}</Pagination>
-                <br />
+        // const paginationBasic = (
+        //     <div>
+        //         <Pagination>{items}</Pagination>
+        //         <br />
 
-                <Pagination size="lg">{items}</Pagination>
-                <br />
+        //         <Pagination size="lg">{items}</Pagination>
+        //         <br />
 
-                <Pagination size="sm">{items}</Pagination>
-            </div>
-        );
+        //         <Pagination size="sm">{items}</Pagination>
+        //     </div>
+        // );
         return (
             <div>
                 <div className="horizontal-scroll-wrapper squares">
@@ -110,7 +110,7 @@ class Home extends Component {
                     <div>item 8</div>
                     <p><a href="#top">Наверх</a></p>
                 </div>
-                <div>
+                {/* <div>
                     <Pagination>
                         <Pagination.First />
                         <Pagination.Prev />
@@ -128,7 +128,7 @@ class Home extends Component {
                         <Pagination.Next />
                         <Pagination.Last />
                     </Pagination>
-                </div>
+                </div> */}
             </div>
         );
     }
