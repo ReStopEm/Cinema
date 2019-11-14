@@ -1,14 +1,14 @@
 import React from 'react';
 import { Switch, Route } from "react-router-dom";
-import Home from './components/Home';
-import Layout from './components/Layout';
+import Home from './components/Home/Home';
+import Layout from './components/NavBar/Layout';
 import LoginPage from './components/Login/LoginPage';
 import registration from './components/Registration/registration';
 import Application from './components/demo/Application';
 import { Helmet } from 'react-helmet';
 import film from './components/demo/film';
 import film2 from './components/demo/film2';
-import userprofile from './components/userprofile';
+import userprofile from './components/UserProfile/userprofile';
 // import { Admin, Resource, ListGuesser } from "react-admin";
 // import jsonServerProvider from "ra-data-json-server";
 // const dataProvider =

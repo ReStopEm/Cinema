@@ -1,8 +1,8 @@
 import React from 'react'
 
 import Player from './Player'
-import { YouTube } from './components/players/YouTube'
-import { SoundCloud } from './components/players/SoundCloud'
+import { YouTube } from '../components/players/YouTube'
+import { SoundCloud } from '../components/players/SoundCloud'
 
 
 

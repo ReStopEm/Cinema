@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Modal.css';
+import './Home.css';
 import { Link } from "react-router-dom";
 import Pagination from 'react-paginate';
 class Home extends Component {

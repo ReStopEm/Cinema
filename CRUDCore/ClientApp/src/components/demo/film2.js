@@ -8,8 +8,8 @@ import './defaults.css'
 import './range.css'
 import './App.css'
 import './players.css'
-import '../Modal.css'
-import ReactPlayer from '../../ReactPlayer'
+import '../Home/Home.css'
+import ReactPlayer from '../../Player/ReactPlayer'
 
 
 class Application extends Component {

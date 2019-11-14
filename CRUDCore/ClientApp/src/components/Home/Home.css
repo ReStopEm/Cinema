@@ -23,7 +23,7 @@
 }
 a {
   text-decoration: none;
-  color: #333;
+  color: #ffffff;
   font-size: 10em;
   display: block;
   padding: 10px 15px;
@@ -37,21 +37,21 @@ a:hover, a.active {
 }
 
 .foto{
-  background: url(../image/telo.jpg) no-repeat;
+  background: url(../../image/telo.jpg) no-repeat;
   background-size:contain;
   width: 200px;
   height: 300px;
-  
+
 }
 .foto1{
-  background: url(../image/max.jpeg) no-repeat;
+  background: url(../../image/max.jpeg) no-repeat;
   background-size:contain;
   width: 400px;
   height: 300px;
   
 }
 .foto2{
-  background: url(../image/kod.jpg) no-repeat;
+  background: url(../../image/kod.jpg) no-repeat;
   background-size:contain;
   width: 400px;
   height: 300px;

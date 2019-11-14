@@ -17,6 +17,7 @@
     "lodash.get": "^4.4.2",
     "pagination": "^0.4.6",
     "prop-types": "^15.7.2",
+    "pure-react-carousel": "^1.23.3",
     "ra-data-json-server": "^2.9.8",
     "react": "^16.8.6",
     "react-admin": "^2.9.8",
@@ -24,11 +25,12 @@
     "react-cropper": "^1.2.0",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
+    "react-helmet-async": "^1.0.4",
     "react-hot-loader": "^4.12.10",
     "react-image-mapper": "0.0.14",
     "react-paginate": "^6.3.2",
     "react-redux": "^7.0.3",
-    "react-router-dom": "^5.0.1",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "3.0.1",
     "react-scroll": "^1.7.14",
     "redux": "^4.0.1",
@@ -36,7 +38,8 @@
     "redux-thunk": "^2.3.0",
     "save": "^2.4.0",
     "screenfull": "^4.2.1",
-    "styled-components": "^4.3.1"
+    "styled-components": "^4.3.1",
+    "typeface-roboto": "0.0.75"
   },
   "scripts": {
     "start": "react-scripts start",

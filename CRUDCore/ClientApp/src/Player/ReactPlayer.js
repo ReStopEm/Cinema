@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 
 import { propTypes, defaultProps, DEPRECATED_CONFIG_PROPS } from './props'
 import { getConfig, omit, isEqual } from './utils'
-import players from './components/players'
+import players from '../components/players'
 import Player from './Player'
 import Preview from './Preview'
-import { FilePlayer } from './components/players/FilePlayer'
+import { FilePlayer } from '../components/players/FilePlayer'
 import renderPreloadPlayers from './preload'
 
 const SUPPORTED_PROPS = Object.keys(propTypes)
@@ -135,6 +135,6 @@ export default class ReactPlayer extends Component {
   }
 }
 
-export { default as YouTube } from './components/players/YouTube'
-export { default as SoundCloud } from './components/players/SoundCloud'
-export { default as FilePlayer } from './components/players/FilePlayer'
+export { default as YouTube } from '../components/players/YouTube'
+export { default as SoundCloud } from '../components/players/SoundCloud'
+export { default as FilePlayer } from '../components/players/FilePlayer'

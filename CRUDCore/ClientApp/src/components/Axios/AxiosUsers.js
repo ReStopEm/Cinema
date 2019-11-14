@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import axios from 'axios';
-import './Modal.css';
 
 class AxiosUsers extends Component {
     state = { 
