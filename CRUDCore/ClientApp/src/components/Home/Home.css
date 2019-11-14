@@ -23,7 +23,7 @@
 }
 a {
   text-decoration: none;
-  color: #333;
+  color: #ffffff;
   font-size: 10em;
   display: block;
   padding: 10px 15px;
@@ -130,4 +130,3 @@ a:hover, a.active {
   margin-left: -300px;
   border: 100px double ;
   }
-
