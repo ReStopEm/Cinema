@@ -54,7 +54,7 @@
   border-radius: 50%;
   height: 50px;
   width: 50px;
-  z-index: 1;
+  font-size: 30px;
 }
 .flickity-button-previous {
   background: #333;
@@ -64,6 +64,7 @@
   border-radius: 50%;
   height: 50px;
   width: 50px;
+  font-size: 30px;
 }
 .flickity-button-next:hover {
   background: #F90;
