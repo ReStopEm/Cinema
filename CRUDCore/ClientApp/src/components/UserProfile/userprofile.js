@@ -17,7 +17,7 @@ class userprofile extends Component {
         </div>
 
 
-        <div className="carousel" data-flickity='{ "groupCells": true }'>
+         <div className="carousel" data-flickity='{ "groupCells": true }'>
           <CarouselProvider
             naturalSlideWidth={100}
             naturalSlideHeight={125}
@@ -32,8 +32,9 @@ class userprofile extends Component {
 
             <ButtonNext className="flickity-button-next">⮚</ButtonNext>
           </CarouselProvider>
-        </div>
-      </div>
+        </div> 
+        </div> 
+        
     )
   }
 }
