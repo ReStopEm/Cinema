@@ -15,7 +15,7 @@ class Home extends Component {
         history.push('/user/add');
     }
     render() {
-
+      
         // let active = 2;
         // let items = [];
         // for (let number = 1; number <= 5; number++) {
