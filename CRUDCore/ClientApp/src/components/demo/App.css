@@ -25,9 +25,14 @@ $gutter-width: 20px;
   width: 580px;
   height: 370px;
   
- 
+  
 }
-
+.player-wrapper1 {
+  width: 580px;
+  height: 370px;
+  
+  
+}
 .react-player {
   margin-bottom: 10px;
   background: rgb(3, 1, 1);

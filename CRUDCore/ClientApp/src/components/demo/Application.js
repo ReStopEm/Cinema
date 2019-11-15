@@ -168,10 +168,10 @@ class Application extends Component {
                             </tr>
                         </tbody>
                     </table>
-                    <div className='player-wrapper'>
+                    <div className='player-wrapper1'>
                         <div className="module-button-hide">
                             <input id="button" type="checkbox" />
-                            <label className="center" onClick={(event) => this.setState({ url: 'https://www.youtube.com/watch?v=tInCbMNqRxo' })} htmlFor="button">► Начать просмотр</label>
+                            <label className="center" onClick={() => this.setState({ url: 'https://www.youtube.com/watch?v=tInCbMNqRxo' })} htmlFor="button">► Начать просмотр</label>
                         </div>
                         <ReactPlayer
                             ref={this.ref}
@@ -201,15 +201,50 @@ class Application extends Component {
                             onDuration={this.onDuration}
                         />
                     </div>
+                    <div className="fif" >
+                    <div className='player-wrapper'>
+                        <div className="module-button-hide">
+                            <input id="button" type="checkbox" />
+                            <label className="center" onClick={() => this.setState({ url: 'https://www.youtube.com/watch?v=TqrgAM_8FvA' })} htmlFor="button">► Начать просмотр</label>
+                        </div>
+                        <ReactPlayer
+                            ref={this.ref}
+                            className='react-player'
+                            width='100%'
+                            height='100%'
+                            url={url}
+                            pip={pip}
+                            playing={playing}
+                            controls={controls}
+                            light={light}
+                            loop={loop}
+                            playbackRate={playbackRate}
+                            volume={volume}
+                            muted={muted}
+                            onReady={() => console.log('onReady')}
+                            onStart={() => console.log('onStart')}
+                            onPlay={this.onPlay}
+                            onEnablePIP={this.onEnablePIP}
+                            onDisablePIP={this.onDisablePIP}
+                            onPause={this.onPause}
+                            onBuffer={() => console.log('onBuffer')}
+                            onSeek={e => console.log('onSeek', e)}
+                            onEnded={this.onEnded}
+                            onError={e => console.log('onError', e)}
+                            onProgress={this.onProgress}
+                            onDuration={this.onDuration}
+                        />
+                    </div>
+                    </div>
                     <div>
-                    <footer className="footer" >Новые сериалы на CiNeMa
-                    Зарубежные сериалы,филмы становятся неотъемлемой частью жизни современного человека. Они являются культурным феноменом и отражены в шутках, мемах, фанатском творчестве, а их персонажей можно встретить на билбордах и в рекламе. Быть сериаломаном в наши дни не только интересно, но и полезно, ведь в таком случае ты всегда сможешь обсудить популярный сериал с друзьями и коллегами.
-
-                    Именно поэтому наша команда ежедневно проверяет все русскоязычные ресурсы и добавляет свежие эпизоды по мере их выхода. Специально для вас мы следим за качеством контента, стараясь сделать ваше пребывание на сайте максимально комфортным. Для этого используется самый быстрый и удобный плеер, который позволяет просматривать сериалы в HD. Релизы отличаются от самых оперативных, одноголосых или двухголосых, до самых профессиональных. Некоторые сериалы имеют официальный многоголосый дубляж от студий. У нас вы найдете озвучки LostFilm, ColdFilm, BaibaKo.tv, NewStudio, Кубик в Кубе, AlexFilm, Jaskier, Амедиа, Кураж-Бамбей, Sunshine Studio, Netflix и множество других релиз-групп, а также сериалы в оригинале и субтитры на русском и английском языках.
-
+                        <footer className="footer" >Новые сериалы на CiNeMa
+                        Зарубежные сериалы,филмы становятся неотъемлемой частью жизни современного человека. Они являются культурным феноменом и отражены в шутках, мемах, фанатском творчестве, а их персонажей можно встретить на билбордах и в рекламе. Быть сериаломаном в наши дни не только интересно, но и полезно, ведь в таком случае ты всегда сможешь обсудить популярный сериал с друзьями и коллегами.
+    
+                        Именно поэтому наша команда ежедневно проверяет все русскоязычные ресурсы и добавляет свежие эпизоды по мере их выхода. Специально для вас мы следим за качеством контента, стараясь сделать ваше пребывание на сайте максимально комфортным. Для этого используется самый быстрый и удобный плеер, который позволяет просматривать сериалы в HD. Релизы отличаются от самых оперативных, одноголосых или двухголосых, до самых профессиональных. Некоторые сериалы имеют официальный многоголосый дубляж от студий. У нас вы найдете озвучки LostFilm, ColdFilm, BaibaKo.tv, NewStudio, Кубик в Кубе, AlexFilm, Jaskier, Амедиа, Кураж-Бамбей, Sunshine Studio, Netflix и множество других релиз-групп, а также сериалы в оригинале и субтитры на русском и английском языках.
+    
                 А главное, вы можете не только посмотреть любимые сериалы онлайн.Все дороги ведут на CiNeMa— лучшие сериалы в жанре драма, комедия, ситком, детектив, романтика, криминал, триллер, ужасы, ромком, подростковые сериалы и многое другое. Смотрите новые сериалы 2019 года в свободном доступе без блокировок — только в хорошем качестве и с самой топовой озвучкой!</footer>
-                </div> 
-        </section>
+                    </div>
+                </section>
                 <section className='section'>
                     <table>
                         <tbody>
