@@ -16,29 +16,44 @@ class Home extends Component {
     }
     render() {
         //console.log($"{u.Id}.{u.UserName} - {u.Email}");
+        var Film_names = ['Телохранитель', 'Макс Стіл', 'Исходний код'];
         return (
             <div>
+                <p><Link name="top"></Link></p>
                 <div className="horizontal-scroll-wrapper squares">
 
-                    <div className="BackToFilm">
-                        <p>Телохранитель</p>
+                    <div class="small" id="web">
+                        <div>
+                            <p>{Film_names[0]}</p>
+                        </div>
                         <Link className="foto" to="/Application" ></Link>
-                        <p>(Год:&nbsp;2010)</p>
+                        <div>
+                            <p>Год:&nbsp;2010</p>
+                        </div>
                     </div>
 
-                    <div className="BackToFilm">
-                        <p>Макс Стіл</p>
+                    <div class="small" id="web">
+                        <div>
+                            <p>{Film_names[1]}</p>
+                        </div>
                         <Link className="foto1" to="/film" ></Link>
+                        <div>
+                            <p>Год:&nbsp;2016</p>
+                        </div>
                     </div>
-                    <div className="BackToFilm">
-                        <p>Исходний код</p>
+                    <div class="small" id="web">
+                        <div>
+                            <p>{Film_names[2]}</p>
+                        </div>
                         <Link className="foto2" to="/film" ></Link>
+                        <div>
+                        </div>
                     </div>
-                    <div className="BackToFilm">item 4</div>
-                    <div className="BackToFilm">item 5</div>
-                    <div className="BackToFilm">item 6</div>
-                    <div className="BackToFilm">item 7</div>
-                    <div className="BackToFilm">item 8</div>
+                    <div>item 4</div>
+                    <div>item 5</div>
+                    <div>item 6</div>
+                    <div>item 7</div>
+                    <div>item 8</div>
 
                 </div>
                 <p ><Link to="#top">Наверх</Link></p>

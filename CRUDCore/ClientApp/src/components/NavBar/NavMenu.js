@@ -16,21 +16,23 @@ class NavMenu extends Component {
                         <span></span>
                     </label>
                     <ul className="menu__box">
-                    <Link className="menu__item" to="/">CiNeMa</Link>
+                        <li className="nav-item">
+                            <Link className="menu__item" to="/">CiNeMa</Link>
+                        </li>
                         <li className="nav-item">
                             {
                                 isAuthenticated ?
-                                    <Link className="menu__item"  to="/userprofile">{user.name}</Link> :
+                                    <Link className="menu__item" to="/userprofile">{user.name}</Link> :
 
-                                    <Link  className="menu__item"  to="/registration">Register</Link>
+                                    <Link className="menu__item" to="/registration">Register</Link>
                             }
                         </li>
                         <li className="nav-item">
                             {
                                 isAuthenticated ?
-                                    <Link  className="menu__item"  to="/" onClick={(e) => { e.preventDefault(); this.props.logout(); }}>LogOut</Link> :
+                                    <Link className="menu__item" to="/" onClick={(e) => { e.preventDefault(); this.props.logout(); }}>LogOut</Link> :
 
-                                    <Link  className="menu__item"  to="/login">Login</Link>
+                                    <Link className="menu__item" to="/login">Login</Link>
                             }
                         </li>
                     </ul>

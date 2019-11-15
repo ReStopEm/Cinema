@@ -10,10 +10,13 @@ $gutter-width: 20px;
 
 .section {
   display: inline-block;
-  max-width: $column-width;
-  margin: $gutter-width;
+  max-width: column-width;
+  margin: gutter-width;
   text-align: left;
   vertical-align: top;
+  background-color: rgb(28, 34, 49);
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .filmtext{

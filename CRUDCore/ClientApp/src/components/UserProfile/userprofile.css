@@ -31,15 +31,14 @@
     background: url(../../image/bet.png) no-repeat;
     width: 500px;
     height: 500px;
+    margin-left:40px;
 }
 .cabtext{
-    margin-left: 320px;
+    margin-left: 350px;
     margin-top: -500px;
     width: 1000px;
 }
 .carousel{
-  margin-top: 300px;
-  margin-left: 150px;
   width: 400px;
   height: 300px;
 }
@@ -100,4 +99,26 @@
 
 @media screen and ( min-width: 768px ) {
   .flickity-button { width: 50%; }
+}
+.wrap {
+  width: 1100px;
+  margin: 0 auto;
+}
+.wrap .main{
+  background-color: rgb(28, 34, 49);
+  border-radius: 10px;
+  padding: 10px;
+  float: left;
+  margin: 10px;
+  width: 80%;
+  height: 600px;
+}
+.wrap .side{
+  background-color: rgb(28, 34, 49);
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: 900px;
+  width: 500px;
+  float: top;
+  height: 500px;
 }
