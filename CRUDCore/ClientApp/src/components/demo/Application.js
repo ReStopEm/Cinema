@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { findDOMNode } from 'react-dom'
 import { hot } from 'react-hot-loader'
 import screenfull from 'screenfull'
+import { format } from 'date-fns'
+import { connect } from "react-redux";
 
 import './reset.css'
 import './defaults.css'
@@ -120,11 +122,64 @@ class Application extends Component {
     ref = player => {
         this.player = player
     }
+    ///////для коментів/////
+
+    state = {
+        comments: [],
+        form: {
+            name: '',
+            comment: ''
+        }
+    }
+
+    componentDidMount() {
+
+        if (localStorage.getItem('state')) {
+
+            this.setState({ ...JSON.parse(localStorage.getItem('state')) })
+
+        }
+
+    }
+
+    addComment = () => {
+        this.setState({
+            comments: [
+                ...this.state.comments,
+                {
+                    id: this.state.comments.length ? this.state.comments.reduce((p, c) => p.id > c.id ? p : c).id + 1 : 1, // max id +1
+                    name: this.state.form.name,
+                    comment: this.state.form.comment,
+                    date: new Date()
+                }
+            ],
+            form: {
+                name: '',
+                comment: ''
+            }
+        }, () => localStorage.setItem('state', JSON.stringify(this.state)))
+    }
+
+    removeComment = (id) => {
+        this.setState({
+            comments: this.state.comments.filter(comment => comment.id !== id)
+        }, () => localStorage.setItem('state', JSON.stringify(this.state)))
+    }
+
+    handleChange = (e) => {
+        console.log(e.target.name)
+        this.setState({
+            form: {
+                ...this.state.form,
+                [e.target.name]: e.target.value,
+            }
+        })
+    }
+    //////////////////////////
 
     render() {
         const { url, playing, controls, light, volume, muted, loop, playbackRate, pip } = this.state
-
-
+        const { user } = this.props.auth;
         return (
 
 
@@ -168,109 +223,121 @@ class Application extends Component {
                             </tr>
                         </tbody>
                     </table>
-                    <div className='player-wrapper1'>
-                        <div className="module-button-hide">
-                            <input id="button" type="checkbox" />
-                            <label className="center" onClick={() => this.setState({ url: 'https://www.youtube.com/watch?v=tInCbMNqRxo' })} htmlFor="button">► Начать просмотр</label>
+                    <tr>
+                        <div className='player-wrapper1'>
+                            <div className="module-button-hide">
+                                <input id="button" type="checkbox" />
+                                <label className="center" onClick={() => this.setState({ url: 'https://www.youtube.com/watch?v=tInCbMNqRxo' })} htmlFor="button">► Начать просмотр</label>
+                            </div>
+                            <ReactPlayer
+                                ref={this.ref}
+                                className='react-player'
+                                width='100%'
+                                height='100%'
+                                url={url}
+                                pip={pip}
+                                playing={playing}
+                                controls={controls}
+                                light={light}
+                                loop={loop}
+                                playbackRate={playbackRate}
+                                volume={volume}
+                                muted={muted}
+                                onReady={() => console.log('onReady')}
+                                onStart={() => console.log('onStart')}
+                                onPlay={this.onPlay}
+                                onEnablePIP={this.onEnablePIP}
+                                onDisablePIP={this.onDisablePIP}
+                                onPause={this.onPause}
+                                onBuffer={() => console.log('onBuffer')}
+                                onSeek={e => console.log('onSeek', e)}
+                                onEnded={this.onEnded}
+                                onError={e => console.log('onError', e)}
+                                onProgress={this.onProgress}
+                                onDuration={this.onDuration}
+                            />
                         </div>
-                        <ReactPlayer
-                            ref={this.ref}
-                            className='react-player'
-                            width='100%'
-                            height='100%'
-                            url={url}
-                            pip={pip}
-                            playing={playing}
-                            controls={controls}
-                            light={light}
-                            loop={loop}
-                            playbackRate={playbackRate}
-                            volume={volume}
-                            muted={muted}
-                            onReady={() => console.log('onReady')}
-                            onStart={() => console.log('onStart')}
-                            onPlay={this.onPlay}
-                            onEnablePIP={this.onEnablePIP}
-                            onDisablePIP={this.onDisablePIP}
-                            onPause={this.onPause}
-                            onBuffer={() => console.log('onBuffer')}
-                            onSeek={e => console.log('onSeek', e)}
-                            onEnded={this.onEnded}
-                            onError={e => console.log('onError', e)}
-                            onProgress={this.onProgress}
-                            onDuration={this.onDuration}
-                        />
-                    </div>
-                    <div className="fif" >
-                    <div className='player-wrapper'>
-                        <div className="module-button-hide">
-                            <input id="button" type="checkbox" />
-                            <label className="center" onClick={() => this.setState({ url: 'https://www.youtube.com/watch?v=TqrgAM_8FvA' })} htmlFor="button">► Начать просмотр</label>
+                    </tr>
+
+                    {/* <div className="fif" >
+                        <div className='player-wrapper'>
+                            <div className="module-button-hide">
+                                <input id="button" type="checkbox" />
+                                <label className="center" onClick={() => this.setState({ url: 'https://www.youtube.com/watch?v=TqrgAM_8FvA' })} htmlFor="button">► Начать просмотр</label>
+                            </div>
+                            <ReactPlayer
+                                ref={this.ref}
+                                className='react-player'
+                                width='100%'
+                                height='100%'
+                                url={url}
+                                pip={pip}
+                                playing={playing}
+                                controls={controls}
+                                light={light}
+                                loop={loop}
+                                playbackRate={playbackRate}
+                                volume={volume}
+                                muted={muted}
+                                onReady={() => console.log('onReady')}
+                                onStart={() => console.log('onStart')}
+                                onPlay={this.onPlay}
+                                onEnablePIP={this.onEnablePIP}
+                                onDisablePIP={this.onDisablePIP}
+                                onPause={this.onPause}
+                                onBuffer={() => console.log('onBuffer')}
+                                onSeek={e => console.log('onSeek', e)}
+                                onEnded={this.onEnded}
+                                onError={e => console.log('onError', e)}
+                                onProgress={this.onProgress}
+                                onDuration={this.onDuration}
+                            />
                         </div>
-                        <ReactPlayer
-                            ref={this.ref}
-                            className='react-player'
-                            width='100%'
-                            height='100%'
-                            url={url}
-                            pip={pip}
-                            playing={playing}
-                            controls={controls}
-                            light={light}
-                            loop={loop}
-                            playbackRate={playbackRate}
-                            volume={volume}
-                            muted={muted}
-                            onReady={() => console.log('onReady')}
-                            onStart={() => console.log('onStart')}
-                            onPlay={this.onPlay}
-                            onEnablePIP={this.onEnablePIP}
-                            onDisablePIP={this.onDisablePIP}
-                            onPause={this.onPause}
-                            onBuffer={() => console.log('onBuffer')}
-                            onSeek={e => console.log('onSeek', e)}
-                            onEnded={this.onEnded}
-                            onError={e => console.log('onError', e)}
-                            onProgress={this.onProgress}
-                            onDuration={this.onDuration}
-                        />
-                    </div>
-                    </div>
-                    <div>
-                        <footer className="footer" >Новые сериалы на CiNeMa
-                        Зарубежные сериалы,филмы становятся неотъемлемой частью жизни современного человека. Они являются культурным феноменом и отражены в шутках, мемах, фанатском творчестве, а их персонажей можно встретить на билбордах и в рекламе. Быть сериаломаном в наши дни не только интересно, но и полезно, ведь в таком случае ты всегда сможешь обсудить популярный сериал с друзьями и коллегами.
+                    </div> */}
+
+                    <tr>
+                        <div>
+                                <div className="App">
+                                    <tr>
+                                        <textarea className="textarea"
+                                            placeholder="Текст коментария"
+                                            name="comment"
+                                            value={this.state.form.comment}
+                                            onChange={this.handleChange}></textarea>
+                                        <br>
+                                        </br>
+                                        <button className="addComment" onClick={this.addComment}>Отправить</button>
+                                    </tr>
+                                    <tr>
+                                        {this.state.comments.map(comment => <div className="CommentPlace" key={comment.id}>
+                                            <span className="comment">{user.name}</span>
+                                            <br></br>
+                                            <span className="comment" style={{ fontStyle: 'Calibri' }}>{format(comment.date, 'DD/MMM/YYYY/HH:mm:ss')}</span>
+                                            <br></br>
+                                            <span className="comment">{comment.comment}</span>
+                                            {/* <button onClick={this.removeComment.bind(null, comment.id)}>Удалить комментарий</button> */}
+                                        </div>)}
+                                    </tr>
+                                </div>
+
+                            </div>
+                    </tr>
+                        <div>
+                            <footer className="footer" >Новые сериалы на CiNeMa
+                            Зарубежные сериалы,филмы становятся неотъемлемой частью жизни современного человека. Они являются культурным феноменом и отражены в шутках, мемах, фанатском творчестве, а их персонажей можно встретить на билбордах и в рекламе. Быть сериаломаном в наши дни не только интересно, но и полезно, ведь в таком случае ты всегда сможешь обсудить популярный сериал с друзьями и коллегами.
     
-                        Именно поэтому наша команда ежедневно проверяет все русскоязычные ресурсы и добавляет свежие эпизоды по мере их выхода. Специально для вас мы следим за качеством контента, стараясь сделать ваше пребывание на сайте максимально комфортным. Для этого используется самый быстрый и удобный плеер, который позволяет просматривать сериалы в HD. Релизы отличаются от самых оперативных, одноголосых или двухголосых, до самых профессиональных. Некоторые сериалы имеют официальный многоголосый дубляж от студий. У нас вы найдете озвучки LostFilm, ColdFilm, BaibaKo.tv, NewStudio, Кубик в Кубе, AlexFilm, Jaskier, Амедиа, Кураж-Бамбей, Sunshine Studio, Netflix и множество других релиз-групп, а также сериалы в оригинале и субтитры на русском и английском языках.
+                            Именно поэтому наша команда ежедневно проверяет все русскоязычные ресурсы и добавляет свежие эпизоды по мере их выхода. Специально для вас мы следим за качеством контента, стараясь сделать ваше пребывание на сайте максимально комфортным. Для этого используется самый быстрый и удобный плеер, который позволяет просматривать сериалы в HD. Релизы отличаются от самых оперативных, одноголосых или двухголосых, до самых профессиональных. Некоторые сериалы имеют официальный многоголосый дубляж от студий. У нас вы найдете озвучки LostFilm, ColdFilm, BaibaKo.tv, NewStudio, Кубик в Кубе, AlexFilm, Jaskier, Амедиа, Кураж-Бамбей, Sunshine Studio, Netflix и множество других релиз-групп, а также сериалы в оригинале и субтитры на русском и английском языках.
     
                 А главное, вы можете не только посмотреть любимые сериалы онлайн.Все дороги ведут на CiNeMa— лучшие сериалы в жанре драма, комедия, ситком, детектив, романтика, криминал, триллер, ужасы, ромком, подростковые сериалы и многое другое. Смотрите новые сериалы 2019 года в свободном доступе без блокировок — только в хорошем качестве и с самой топовой озвучкой!</footer>
-                    </div>
+                        </div>
                 </section>
-                <section className='section'>
-                    <table>
-                        <tbody>
-
-                            <tr>
-
-                                <td>
-                                    {/* {this.renderLoadButton('https://www.youtube.com/watch?v=tInCbMNqRxo', 'start')} */}
-
-                                </td>
-                            </tr>
-                            {/* <tr>
-                                <th>Custom URL</th>
-                                <td>
-                                    <input ref={input => { this.urlInput = input }} type='text' placeholder='Enter URL' />
-                                    <button onClick={() => this.setState({ url: 'https://www.youtube.com/watch?v=TqrgAM_8FvA' })}>Load</button>
-                                </td>
-                            </tr> */}
-                        </tbody>
-                    </table>
-
-                </section>
-
             </div>
-        )
-    }
-}
-
-export default hot(module)(Application)
+                )
+            }
+        }
+const mapStateToProps = (state) => {
+    return {
+                    auth: state.auth
+            };
+        }
+export default connect(mapStateToProps)(Application)
