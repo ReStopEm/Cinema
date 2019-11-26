@@ -93,7 +93,6 @@ a:hover, a.active {
   left: -500px;
   width: calc(750px + 1px);
   max-height: 2000px;
-  margin: 25px;
   /* padding-top: 700px; */
   /* background: #abc; */
   overflow-y: auto;
@@ -135,3 +134,8 @@ div > p{
   align-items: center;
   margin-left: 25%;
 }
+
+  @media only screen and (max-width : 992px) {
+
+ 
+  }
