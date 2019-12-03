@@ -71,7 +71,9 @@ class SignUpForm extends Component {
         const { errors, isLoading } = this.state;
         const form = (
             <form onSubmit={this.onSubmitForm} style={{ textAlign: 'center' }} id="form-content">
-
+<div class="notice-success">
+  Ура! Поздравляем, вы сделали это!
+</div>
                 {
                     !!errors.invalid ?
                         <div className="alert alert-danger">

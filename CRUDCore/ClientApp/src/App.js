@@ -4,6 +4,7 @@ import Home from './components/Home/Home';
 import Layout from './components/NavBar/Layout';
 import LoginPage from './components/Login/LoginPage';
 import registration from './components/Registration/registration';
+import AdminPanel from './components/Admin_Panel';
 import Application from './components/demo/Application';
 import { Helmet } from 'react-helmet';
 import film from './components/demo/film';
@@ -14,12 +15,13 @@ import userprofile from './components/UserProfile/userprofile';
 // const dataProvider =
 //   jsonServerProvider("https://jsonplaceholder.typicode.com");
 import test from './components/Test/test';
+import './App.css';
 function App() {
   return (
 
     <Layout>
       <Helmet>
-        <style>{'body {background-image: linear-gradient(180deg,#1d3655, #000000 70%,#1d3655);background-size: 100% 100%;background-attachment: fixed; }'}</style>
+        <style>{'body {background-image: linear-gradient(180deg,#1d3655, #000000 70%,#1d3655) ;background-size:auto 100% ;background-attachment: fixed; no-repeat}'}</style>
         
       </Helmet>
       <Switch>
@@ -30,6 +32,7 @@ function App() {
         <Route exact path='/Application' component={Application} />
         <Route exact path='/login' component={LoginPage} />
         <Route exact path='/registration' component={registration} />
+        <Route exact path='/upload' component={AdminPanel} />
         <Route exact path='/film' component={film} />
         <Route exact path='/film2' component={film2} />
         <Route exact path='/userprofile' component={userprofile} />

@@ -28,7 +28,9 @@
     color: white;
 }
 .text_g{
+  font-size: 15px;
     color: white;
+    margin: 5px;
 }
 .center{
     margin-left: 150px;

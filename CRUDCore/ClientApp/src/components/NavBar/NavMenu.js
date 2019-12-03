@@ -35,6 +35,9 @@ class NavMenu extends Component {
                                     <Link className="menu__item" to="/login">Login</Link>
                             }
                         </li>
+                        <li className="nav-item">
+                            <Link className="menu__item" to="/upload">Admin Panel</Link>
+                        </li>
                     </ul>
                 </div>
                 {/* <div >
