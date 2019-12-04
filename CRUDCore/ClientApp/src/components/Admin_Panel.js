@@ -10,15 +10,16 @@ class SignUpForm extends Component {
      
       handleSubmit = event => {
         event.preventDefault();
-     
+        //  console.log(name);
         const user= {
           name: this.state.name
+          
         };
      
-        axios.post(`api/Account/upload`, { user })
-          .then(res => {
-            console.log(res);
-          })
+        // axios.post(`api/Account/upload`, { user })
+        //   .then(res => {
+        //     console.log(res);
+        //   })
       }
      
       render() {
@@ -26,7 +27,7 @@ class SignUpForm extends Component {
           <div>
             <form onSubmit={this.handleSubmit}>
               <label>
-                User Name:
+                User Name: 
                 <input type="text" name="name" onChange={this.handleChange} />
               </label>
               <button type="submit">Add user</button>
