@@ -10,7 +10,7 @@ class SignUpForm extends Component {
      
       handleSubmit = event => {
         event.preventDefault();
-        //  console.log(name);
+     
         const user= {
           name: this.state.name
           
@@ -21,16 +21,18 @@ class SignUpForm extends Component {
         //     console.log(res);
         //   })
       }
-     
+      logconsole = event => {
+        console.log(getElementId("s").value);
+      }
       render() {
         return (
           <div>
             <form onSubmit={this.handleSubmit}>
               <label>
                film: 
-                <input type="text" name="name" onChange={this.handleChange} />
+                <input id="s" type="text" name="name" onChange={this.handleChange} />
               </label>
-              <button type="submit">add film</button>
+              <button onClick={this.logconsole} type="submit">add film</button>
             </form>
           </div>
         )
