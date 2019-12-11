@@ -4,7 +4,7 @@ import Home from './components/Home/Home';
 import Layout from './components/NavBar/Layout';
 import LoginPage from './components/Login/LoginPage';
 import registration from './components/Registration/registration';
-import AdminPanel from './components/Admin_Panel';
+import Add_film from './components/Admin_Panel/Add_film';
 import Application from './components/demo/Application';
 import { Helmet } from 'react-helmet';
 import film from './components/demo/film';
@@ -32,7 +32,7 @@ function App() {
         <Route exact path='/Application' component={Application} />
         <Route exact path='/login' component={LoginPage} />
         <Route exact path='/registration' component={registration} />
-        <Route exact path='/upload' component={AdminPanel} />
+        <Route exact path='/upload' component={Add_film} />
         <Route exact path='/film' component={film} />
         <Route exact path='/film2' component={film2} />
         <Route exact path='/userprofile' component={userprofile} />
