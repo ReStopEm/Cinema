@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Home.css';
 import { Link } from "react-router-dom";
-
+//import Pagination from 'react-paginate';
 class Home extends Component {
     state = {
         isShowModal: false,

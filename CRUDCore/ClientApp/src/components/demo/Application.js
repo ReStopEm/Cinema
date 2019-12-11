@@ -184,7 +184,6 @@ class Application extends Component {
 
 
             <div className='app'>
-
                 <section className='section'>
                     <table>
                         <tbody>
