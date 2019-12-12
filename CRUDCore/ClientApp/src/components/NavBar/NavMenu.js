@@ -36,7 +36,7 @@ class NavMenu extends Component {
                             }
                         </li>
                         <li className="nav-item">
-                            <Link className="menu__item" to="/upload">Admin Panel</Link>
+                            <Link className="menu__item" to="/upload">Add film</Link>
                         </li>
                     </ul>
                 </div>
