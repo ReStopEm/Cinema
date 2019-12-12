@@ -22,7 +22,7 @@ class SignUpForm extends Component {
         //   })
       }
       logconsole = event => {
-        console.log(getElementId("s").value);
+        //console.log(getElementId("s").value);
       }
       render() {
         return (

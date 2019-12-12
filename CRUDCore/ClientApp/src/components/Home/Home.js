@@ -19,10 +19,9 @@ class Home extends Component {
         var Film_names = ['Телохранитель', 'Макс Стіл', 'Исходний код'];
         return (
             <div>
-                <p><Link name="top"></Link></p>
                 <div className="horizontal-scroll-wrapper squares">
 
-                    <div class="small" id="web">
+                    <div class="small_first" id="web">
                         <div>
                             <p>{Film_names[0]}</p>
                         </div>
