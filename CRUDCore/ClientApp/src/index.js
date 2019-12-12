@@ -13,7 +13,8 @@ import rootReducer from "./rootReducer";
 import setAutorizationToken from './utils/setAutorizationToken';
 import { setCurrentUser } from './action/authAction';
 import jwt from 'jsonwebtoken';
-
+// import * as reducers from './store/reducers';
+// const store = createStore(combineReducers(reducers), applyMiddleware(thunk));
 const store = createStore(
     rootReducer,
     composeWithDevTools(
