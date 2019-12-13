@@ -16,6 +16,9 @@ class NavMenu extends Component {
                         <span></span>
                     </label>
                     <ul className="menu__box">
+                    <li className="nav-item">
+                        <img src="../../../public/favico_1.ico" alt="asd"/>
+                    </li>
                         <li className="nav-item">
                             <Link className="menu__item" to="/">CiNeMa</Link>
                         </li>

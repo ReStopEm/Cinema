@@ -18,7 +18,7 @@ class Home extends Component {
         //console.log($"{u.Id}.{u.UserName} - {u.Email}");
         var Film_names = ['Телохранитель', 'Макс Стіл', 'Исходний код'];
         return (
-            <div>
+            <div className="main">
                 <div className="horizontal-scroll-wrapper squares">
 
                     <div class="small_first" id="web">

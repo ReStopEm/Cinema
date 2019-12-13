@@ -105,3 +105,13 @@
 .menu__item {
   transition-duration: .25s;
 }
+@media (max-width: 620px)
+ { 
+  .menu__box {
+  width: 100%;
+  }
+  .menu__item {
+    font-size: 40px;
+    margin-top: 40px
+  }
+ }
