@@ -4,7 +4,10 @@ import { hot } from 'react-hot-loader'
 import screenfull from 'screenfull'
 import { format } from 'date-fns'
 import { connect } from "react-redux";
-
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
+import Pagination from "react-js-pagination";
+require("bootstrap/less/bootstrap.less");
 import './reset.css'
 import './defaults.css'
 import './range.css'
@@ -15,6 +18,11 @@ import ReactPlayer from '../../Player/ReactPlayer'
 
 
 class Application extends Component {
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //       activePage: 15
+    //     };
     state = {
         url: null,
         pip: false,
@@ -175,13 +183,25 @@ class Application extends Component {
             }
         })
     }
+    // handlePageChange(pageNumber) {
+    //     console.log(`active page is ${pageNumber}`);
+    //     this.setState({activePage: pageNumber});
+    //   }
     //////////////////////////
 
     render() {
         const { url, playing, controls, light, volume, muted, loop, playbackRate, pip } = this.state
         const { user } = this.props.auth;
         return (
-
+        //     <div>
+        //     <Pagination
+        //       activePage={this.state.activePage}
+        //       itemsCountPerPage={10}
+        //       totalItemsCount={450}
+        //       pageRangeDisplayed={5}
+        //       onChange={::this.handlePageChange}
+        //     />
+        //   </div>
 
             <div className='app'>
                 <section className='section'>
@@ -351,4 +371,5 @@ const mapStateToProps = (state) => {
                     auth: state.auth
             };
         }
+       // ReactDOM.render(<Application />, document.getElementById("root"));
 export default connect(mapStateToProps)(Application)
