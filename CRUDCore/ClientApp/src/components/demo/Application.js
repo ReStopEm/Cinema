@@ -4,10 +4,7 @@ import { hot } from 'react-hot-loader'
 import screenfull from 'screenfull'
 import { format } from 'date-fns'
 import { connect } from "react-redux";
-import React, { Component } from "react";
-import ReactDOM from "react-dom";
-import Pagination from "react-js-pagination";
-require("bootstrap/less/bootstrap.less");
+
 import './reset.css'
 import './defaults.css'
 import './range.css'
