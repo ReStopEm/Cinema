@@ -122,21 +122,40 @@
   float: top;
   height: 500px;
 }
-@media (min-width: 768px) and (max-width: 1600px) 
+@media (min-width: 768px) and (max-width: 1660px) 
 { 
+  .side{
+    display: none;
+  }
   .wrap .side{
     margin-left: 850px;
   }
-}
-@media (max-width: 767px)
-{
-  .side{
-
+  .wrap .main{
+    width: 1000px;
   }
 }
-@media (max-width: 620px)
- { 
- }
- @media (max-width:500px)
- { 
- }
+@media (max-width: 1150px)
+{
+  .wrap .main{
+    width: 800px;
+  }
+}
+@media (max-width: 980px)
+{
+  .wrap .main{
+    width: 700px;
+  }
+}
+@media (max-width: 770px)
+{
+  .wrap .main{
+    width: 500px;
+  }
+  .cabtext{
+    font-size: 15px;
+  }
+  .cab{
+    width: 490px;
+    height: 490px;
+  }
+}
