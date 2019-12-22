@@ -71,9 +71,9 @@ class SignUpForm extends Component {
         const { errors, isLoading } = this.state;
         const form = (
             <form onSubmit={this.onSubmitForm} style={{ textAlign: 'center' }} id="form-content">
-<div class="notice-success">
+{/* <div class="notice-success">
   Ура! Поздравляем, вы сделали это!
-</div>
+</div> */}
                 {
                     !!errors.invalid ?
                         <div className="alert alert-danger">
@@ -81,7 +81,7 @@ class SignUpForm extends Component {
                     </div> : ''}
 
 
-                <div id="row" className={classnames('form-group', { 'has-error': !!errors.name })}>
+                <div id="row1" className={classnames('form-group', { 'has-error': !!errors.name })}>
                     <input type="text"
                         className="form-control"
                         id="email"

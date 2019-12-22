@@ -34,3 +34,17 @@
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     padding: 15px 20px 15px 50px;
   }
+  @media (max-width: 990px)
+{
+    .form-control{
+width: 100px;
+    }
+    #row{
+      width: 100px;
+        margin-top: 0px;
+    }
+    #row1{
+        margin-left: 77%;
+        margin-top: 53px;
+    }
+}
