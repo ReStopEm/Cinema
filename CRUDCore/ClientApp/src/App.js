@@ -36,7 +36,7 @@ function App() {
         <Route exact path='/film' component={film} />
         <Route exact path='/film2' component={film2} />
         <Route exact path='/userprofile' component={userprofile} />
-         <Route exact path='/test' component={test} /> 
+        <Route exact path='/test' component={test} /> 
       </Switch>
     </Layout>
 

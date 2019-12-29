@@ -37,10 +37,10 @@
   @media (max-width: 990px)
 {
     .form-control{
-width: 100px;
+        width: 100px;
     }
     #row{
-      width: 100px;
+        width: 100px;
         margin-top: 0px;
     }
     #row1{

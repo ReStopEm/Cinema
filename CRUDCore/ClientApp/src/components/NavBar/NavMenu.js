@@ -41,6 +41,9 @@ class NavMenu extends Component {
                         <li className="nav-item">
                             <Link className="menu__item" to="/upload">Add film</Link>
                         </li>
+                        <li className="nav-item">
+                            <Link className="menu__item" to="/test">Test</Link>
+                        </li>
                     </ul>
                 </div>
                 {/* <div >
